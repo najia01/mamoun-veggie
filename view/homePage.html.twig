@@ -1,0 +1,11 @@
+{% extends "template.html.twig" %}
+{% block title %}Bienvenue sur la page d'accueil {% endblock %}
+
+{% block content %}
+<h1> Bienvenue</h1>
+<ul>
+{% for post in posts %}
+<li><a href="{{ link }}{{ post.id }}">{{ post.title }}</a></li>
+{% endfor %}
+</ul>
+ {% endblock %}
