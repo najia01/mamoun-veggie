@@ -1,17 +1,18 @@
 <?php
+
 class RecipeModel extends Model{
     public function getRecipe(){
-        $recipe = [];
+        $recipes = [];
 
-        $req = $this->getDb()->query('SELECT `recipe_id`,`title`,`image` FROM  `recipe` ORDER BY `recipe_id` DESC LIMIT 5;');
+        $req = $this->getDb()->query('SELECT `recipe_id`,`title`,`image`,`description` FROM  `recipe` ORDER BY `recipe_id` DESC LIMIT 7;');
 
         while($recipe = $req->fetch(PDO::FETCH_ASSOC)){
-            $recipe[] = new Recipe($recipe);
+            $recipes[] = new Recipe($recipe);
         }
         
         $req->closeCursor();
-        // referme la requete 
-        return $recipe;
+         
+        return $recipes;
         
     }
     public function getOneRecipe(int $id){
@@ -23,7 +24,7 @@ class RecipeModel extends Model{
         $recipe = new Recipe($req->fetch(PDO::FETCH_ASSOC));
                        
         $req->closeCursor();
-    //   liberer la memoire 
+    
         return $recipe;
         
     }
