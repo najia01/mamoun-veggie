@@ -1,34 +1,24 @@
 <?php
 
-class RecipeController
+class RecipeController extends Controller
 {
     public function homePage()
     {
         global $router;
         $model = new RecipeModel();
-       
         $datas = $model->getRecipe();
-       
-        $loader = new \Twig\Loader\FilesystemLoader('./view');
-        $twig = new \Twig\Environment($loader, [
-            'cache' => false,
-        ]);
-
-        $link = $router->generate('basePost');
-        echo $twig->render('homePage.html.twig', ['recipe' => $datas,'link'=> $link]);
+        $link = $router->generate('baseRecipe');
+        echo self::getTwig()->render('homePage.html.twig',['recipes' => $datas,'link'=>$link]);
     }
 
-    public function getOne($id)
-    {
-        $model = new RecipeModel();
-       
-        $recipe = $model->getOneRecipe($id);
-       
-        $loader = new \Twig\Loader\FilesystemLoader('./view');
-        $twig = new \Twig\Environment($loader, [
-            'cache' => false,
-        ]);
 
-        echo $twig->render('oneRecipe.html.twig', ['recipe' => $recipe]);
-    }
+    // public function getOne($id)
+    // {
+    //     global $router;
+    //     $model = new RecipeModel();
+    //     $recipe = $model->getOneRecipe($id);
+    //     $link = $router->generate('getOneRecipe');
+
+    //     echo self::getTwig()->render('oneRecipe.html.twig', ['recipe' => $recipe, 'link'=> $link]);
+    // }
 }

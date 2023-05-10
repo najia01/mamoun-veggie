@@ -4,13 +4,14 @@ require_once './vendor/autoload.php';
 
 $router = new AltoRouter();
 
-$router->setBasePath('/php/router');
+$router->setBasePath('/projets/mamoun-veggie');
 
 $router->map( 'GET', '/','RecipeController#homePage','home');
-// $router->map( 'GET', '/post/','','basePost');
-// $router->map( 'GET', '/post/[i:id]','PostController#getOne','getOnePost');
+$router->map( 'GET', '/recipes','RecipeController#baseRecipe','baseRecipe');
+// $router->map( 'GET', '/Recipe/[i:id]','RecipeController#oneRecipe','getOneRecipe');
 
 $match = $router->match();
+
 if(is_array($match)){
     list($controller, $action) = explode ('#', $match['target']);
  
