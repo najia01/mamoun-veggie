@@ -1,7 +1,7 @@
 <?php
 class Recipe
 {
-    private $recipeId;
+    private $recipe_Id;
     private $image;
     private $title;
     private $description;
@@ -37,7 +37,7 @@ class Recipe
      */ 
     public function getRecipeId()
     {
-        return $this->recipeId;
+        return $this->recipe_Id;
     }
 
     /**
@@ -105,7 +105,7 @@ class Recipe
      */ 
     public function setRecipeId($recipeId)
     {
-        $this->recipeId = $recipeId;
+        $this->recipe_Id = $recipeId;
 
         return $this;
     }
