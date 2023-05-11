@@ -14,6 +14,7 @@ after {
 
 body {
     padding: 10px;
+    height: auto;
 
 }
 
@@ -134,7 +135,6 @@ header {
     margin: 30px auto 250px auto;
     position: relative;
     z-index: 100;
-    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.8);
     font-family: 'OpenSans-Bold', sans-serif;
 
     .stretchMenu {
@@ -154,7 +154,7 @@ header {
     &>li.slide {
         float: left;
         width: 150px;
-        transition: 0.25s;
+        transition: 0.8s;
 
         &>a {
             border-right: 1px solid #000;
@@ -162,23 +162,22 @@ header {
     }
 
     &>li.last {
-        width: 470px;
         float: left;
     }
 
     &>li>a {
         display: block;
-        font-weight: bold;
+        font-family: 'OpenSans-Bold', sans-serif;
+        font-style: italic;
         line-height: 50px;
-        padding-left: 10px;
         color: #000;
         text-decoration: none;
-        font-size: 13px;
-        border-left: 1px solid #fff;
+        font-size: .9rem;
+        border-left: 2px solid #fff;
     }
 
     li.p1>div {
-        background: #09c;
+        background: $secondary;
     }
 
     li.p2>div {
@@ -194,15 +193,7 @@ header {
     }
 
     li.p5>div {
-        background: #f6c;
-    }
-
-    li.p1>div,
-    li.p2>div,
-    li.p3>div,
-    li.p4>div,
-    li.p5>div {
-        background-image: linear-gradient(90deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0));
+        background: $primary;
     }
 
     &:hover {
@@ -221,84 +212,66 @@ header {
 
     &:hover>li:hover>div {
         height: 210px;
-        transition: 0.25s 1s;
+        transition: 0.3s 1s;
     }
 
-    &>li>div  {
+    &>li>div {
         display: block;
-        width: 470px;
+        width: 469px;
         height: 50px;
-        background: #888;
         margin-top: -50px;
+        overflow: hidden;
     }
 
+    
     &>li>div dl {
-        width: 110px;
+        // width: 120px;
         float: left;
-        padding: 5px 10px;
-        margin: 12px;
-        font-weight: bold;
+        padding: 30px 10px;
+        margin: 30px;
+
     }
 
     &>li>div dl dt {
-        padding-left: 10px;
-        margin-bottom: 5px;
-        font-size: 13px;
+        font-family: 'OpenSans-Bold', sans-serif;
+        font-size: 1rem;
         line-height: 25px;
-        text-shadow: 0 1px 1px #fff;
-
-        &.p1 {
-            color: #036;
-        }
-
-        &.p2 {
-            color: #630;
-        }
-
-        &.p3 {
-            color: #063;
-        }
-
-        &.p4 {
-            color: #360;
-        }
-
-        &.p5 {
-            color: #906;
-        }
+        text-transform: uppercase;
+               
     }
 
-    &>li>div dl dd {
-        padding: 0;
-        margin: 0;
+    &>li>div dl dt a {
+        color: white;
+        text-decoration: none;
     }
 
     &>li>div dl dd a {
         display: block;
         color: white;
-        font-size: 11px;
+        font-family: 'OpenSans-Regular', sans-serif;
+        font-size: .9rem;
         line-height: 20px;
         text-decoration: none;
-        padding-left: 10px;
+        font-style: italic;
 
         &:hover {
-            color: #fff;
-            background: rgba(0, 0, 0, 0.3);
-            border-radius: 5px;
+            opacity: 50%;
+
         }
     }
 }
 
-#info .stretchDrop>li>div p {
+#info.stretchDrop>li>div p {
     width: 404px;
     height: 30px;
+    font-family: 'OpenSans-Bold', sans-serif;
     background: #eee;
     position: absolute;
     bottom: 5px;
     left: 12px;
     padding: 0 20px;
     line-height: 30px;
-    font-size: 12px;
+    font-size: .9rem;
     margin: 0;
     border-radius: 30px;
 }
