@@ -37,7 +37,7 @@ header {
     margin: 0 auto;
     height: 170px;
 
-    nav {
+    .nav-header {
         width: 100%;
         height: 150px;
         display: flex;
@@ -119,18 +119,186 @@ header {
         flex: 1;
         height: 2px;
         margin: 0 .5em;
-        
+
     }
 }
 
-
-
-// border: 0 solid $secondary;
-// border-top-width: 3px;
-// height: 0;
-// margin: 40px auto;
-// display: block;
-// width: 1000px;
-// position: relative;
-
 // *****************************************END HEADER ***********************************
+
+// *******************************************MENU DEROULANT ***************************************
+
+
+.stretchHolder {
+    width: 750px;
+    height: 50px;
+    margin: 30px auto 250px auto;
+    position: relative;
+    z-index: 100;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.8);
+    font-family: 'OpenSans-Bold', sans-serif;
+
+    .stretchMenu {
+        position: absolute;
+        width: 750px;
+        overflow: hidden;
+    }
+}
+
+.stretchDrop {
+    // padding: 0;
+    // margin: 0;
+    list-style: none;
+    width: 1150px;
+    position: relative;
+
+    &>li.slide {
+        float: left;
+        width: 150px;
+        transition: 0.25s;
+
+        &>a {
+            border-right: 1px solid #000;
+        }
+    }
+
+    &>li.last {
+        width: 470px;
+        float: left;
+    }
+
+    &>li>a {
+        display: block;
+        font-weight: bold;
+        line-height: 50px;
+        padding-left: 10px;
+        color: #000;
+        text-decoration: none;
+        font-size: 13px;
+        border-left: 1px solid #fff;
+    }
+
+    li.p1>div {
+        background: #09c;
+    }
+
+    li.p2>div {
+        background: #c90;
+    }
+
+    li.p3>div {
+        background: #0c9;
+    }
+
+    li.p4>div {
+        background: #9c0;
+    }
+
+    li.p5>div {
+        background: #f6c;
+    }
+
+    li.p1>div,
+    li.p2>div,
+    li.p3>div,
+    li.p4>div,
+    li.p5>div {
+        background-image: linear-gradient(90deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0));
+    }
+
+    &:hover {
+        direction: ltr;
+    }
+
+    &:hover>li.slide {
+        width: 70px;
+        transition: 0.25s;
+    }
+
+    &:hover>li.slide:hover {
+        width: 470px;
+        transition: 0.25s;
+    }
+
+    &:hover>li:hover>div {
+        height: 210px;
+        transition: 0.25s 1s;
+    }
+
+    &>li>div  {
+        display: block;
+        width: 470px;
+        height: 50px;
+        background: #888;
+        margin-top: -50px;
+    }
+
+    &>li>div dl {
+        width: 110px;
+        float: left;
+        padding: 5px 10px;
+        margin: 12px;
+        font-weight: bold;
+    }
+
+    &>li>div dl dt {
+        padding-left: 10px;
+        margin-bottom: 5px;
+        font-size: 13px;
+        line-height: 25px;
+        text-shadow: 0 1px 1px #fff;
+
+        &.p1 {
+            color: #036;
+        }
+
+        &.p2 {
+            color: #630;
+        }
+
+        &.p3 {
+            color: #063;
+        }
+
+        &.p4 {
+            color: #360;
+        }
+
+        &.p5 {
+            color: #906;
+        }
+    }
+
+    &>li>div dl dd {
+        padding: 0;
+        margin: 0;
+    }
+
+    &>li>div dl dd a {
+        display: block;
+        color: white;
+        font-size: 11px;
+        line-height: 20px;
+        text-decoration: none;
+        padding-left: 10px;
+
+        &:hover {
+            color: #fff;
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 5px;
+        }
+    }
+}
+
+#info .stretchDrop>li>div p {
+    width: 404px;
+    height: 30px;
+    background: #eee;
+    position: absolute;
+    bottom: 5px;
+    left: 12px;
+    padding: 0 20px;
+    line-height: 30px;
+    font-size: 12px;
+    margin: 0;
+    border-radius: 30px;
+}
