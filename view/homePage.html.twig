@@ -1,10 +1,16 @@
 {% extends "template.html.twig" %}
 
-
 {% block title %} Mamoun Veggie {% endblock %}
+
+
+    
+   {% block stylesheet %}{% endblock %}
 
 {% block content %}
 
+{# ******************************MENU DEROULANT **************************** #}
+<main>
+<div class="row-limit-size">
 <div id="info">
 <div class="stretchHolder">
 <div class="stretchMenu">
@@ -161,6 +167,93 @@
 </div>
 </div>
 </div>
+
+{# *****************************END MENU DEROULANT *************************** #}
+
+{#----------------------------BARRE DE RECHERCHE--------------------------------  #}
+<section class="search-contain">
+
+<h1 class="search-title">Citation</h1>
+<p class="citation">La vraie cuisine est une forme d'art.Un cadeau à partager.<br>
+<span class="name">Oprah Winfrey</span></p>
+
+<div class="search-bar">
+	<input type="text" class="SearchBar-input" placeholder="Rechercher votre recette">
+	
+			<button class="SearchBar-button">
+				<i class="SearchBar-icon  material-icons">search</i>
+			</button>
+
+
+</div>
+
+</section>
+
+{#-----------------------END BARRE DE RECHERCHE ------------------  #}
+
+{# ------------------- --DERNIERES RECETTES -------------------------- #}
+
+<section class="last-recipe">
+
+<h1 class="new-recipe">Les dernières recettes</h1>
+
+<div class="card">
+   <div class="header">
+      <div class="icon">
+    
+    <a href="#"><img class="icons" src="{{ ('img/favori.svg') }}" alt="Logo"></a>
+    
+  </div>
+</div>
+
+   <div class="text">
+      <h2 class="food">
+         Nouilles sautées
+      </h2>
+
+    	<i class="fa-light fa-clock">15 Mins</i>
+   		<i class="fa-light fa-users">2 pers </i> 
+      
+    <p class="info">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum, temporibus.</p>
+
+   </div>
+   <a href="#" class="btn">A vous de jouer!</a>
+</div>
+
+
+
+
+
+
+
+
+
+</section>
+
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+</main>
+
+
+
+
 
 
  {% endblock %}

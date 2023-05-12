@@ -60,7 +60,7 @@ header ul.menu li {
 header ul.menu li a {
   font-family: "OpenSans-Bold";
   text-decoration: none;
-  font-size: 1rem;
+  font-size: 1.2rem;
   color: black;
 }
 header ul.menu li a:hover {
@@ -73,7 +73,7 @@ header ul.menu li #user-connect {
   border-radius: 20px;
   font-family: "OpenSans-Bold";
   text-decoration: none;
-  font-size: 1rem;
+  font-size: 1.1rem;
   color: black;
   cursor: pointer;
   background-color: #ebded5;
@@ -89,6 +89,7 @@ header ul.menu li #user-connect:hover {
   text-align: center;
   font-family: "OpenSans-Bold", sans-serif;
   color: #b54f2c;
+  padding: 30px;
 }
 .hr::before, .hr::after {
   background: #b54f2c;
@@ -101,7 +102,7 @@ header ul.menu li #user-connect:hover {
 .stretchHolder {
   width: 750px;
   height: 50px;
-  margin: 30px auto 250px auto;
+  margin: 30px auto 140px auto;
   position: relative;
   z-index: 100;
   font-family: "OpenSans-Bold", sans-serif;
@@ -216,4 +217,130 @@ header ul.menu li #user-connect:hover {
   font-size: 0.9rem;
   margin: 0;
   border-radius: 30px;
+}
+
+.search-contain {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #b54f2c;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.search-title {
+  font-size: 1.8rem;
+  font-family: "OpenSans-Bold", sans-serif;
+  text-align: center;
+  font-style: italic;
+  color: #f7953c;
+}
+
+.citation {
+  font-size: 1.3rem;
+  font-family: "OpenSans-Bold", sans-serif;
+  font-style: italic;
+  text-align: center;
+  color: #b54f2c;
+  padding: 30px;
+}
+.citation .name {
+  font-size: 1.5rem;
+  font-family: "OpenSans-Bold", sans-serif;
+  text-transform: uppercase;
+  color: #f7953c;
+}
+
+input,
+button {
+  border: none;
+  background: none;
+  outline: 0;
+}
+
+button {
+  cursor: pointer;
+}
+
+.SearchBar-input::-moz-placeholder {
+  color: white;
+  font-style: italic;
+  opacity: 0.6;
+}
+
+.SearchBar-input::placeholder {
+  color: white;
+  font-style: italic;
+  opacity: 0.6;
+}
+
+.search-bar {
+  height: 3em;
+  display: flex;
+  border-radius: 4em;
+  background-color: #f7953c;
+}
+.search-bar:hover .SearchBar-input {
+  padding-left: 2em;
+  padding-right: 1em;
+  width: 400px;
+}
+.search-bar .SearchBar-input {
+  width: 0;
+  font-size: 1.2em;
+  color: white;
+  transition: 0.45s;
+}
+.search-bar .SearchBar-button {
+  display: flex;
+  border-radius: 50%;
+  width: 4em;
+  height: 3.5em;
+  background-color: #f7953c;
+  transition: 0.3s;
+}
+.search-bar .SearchBar-button:active {
+  transform: scale(0.85);
+}
+.search-bar .SearchBar-icon {
+  margin: auto;
+  color: #fff;
+}
+
+.last-recipe {
+  width: 100%;
+  height: auto;
+}
+
+.new-recipe {
+  font-family: "OpenSans-Bold", sans-serif;
+  font-size: 1.8rem;
+  font-weight: 600;
+  padding: 20px;
+}
+
+.card {
+  max-width: 300px;
+  height: auto;
+  position: relative;
+  padding: 20px;
+  box-shadow: 0px 0px 20px 2px #000;
+  border-radius: 20px;
+}
+.card .header {
+  background: url(../img/nouilles.jpg);
+  background-size: cover;
+  min-height: 200px;
+}
+.card .header .icon a.fa-sharp .fa-light .fa-heart {
+  position: absolute;
+  color: black;
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 15px;
+  border-radius: 50%;
 }/*# sourceMappingURL=style.css.map */

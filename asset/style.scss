@@ -74,7 +74,7 @@ header {
             a {
                 font-family: 'OpenSans-Bold';
                 text-decoration: none;
-                font-size: 1rem;
+                font-size: 1.2rem;
                 color: black;
 
                 &:hover {
@@ -89,7 +89,7 @@ header {
                 border-radius: 20px;
                 font-family: 'OpenSans-Bold';
                 text-decoration: none;
-                font-size: 1rem;
+                font-size: 1.1rem;
                 color: black;
                 cursor: pointer;
                 background-color: $new;
@@ -112,6 +112,7 @@ header {
     text-align: center;
     font-family: 'OpenSans-Bold', sans-serif;
     color: $secondary;
+    padding: 30px;
 
     &::before,
     &::after {
@@ -128,11 +129,10 @@ header {
 
 // *******************************************MENU DEROULANT ***************************************
 
-
 .stretchHolder {
     width: 750px;
     height: 50px;
-    margin: 30px auto 250px auto;
+    margin: 30px auto 140px auto;
     position: relative;
     z-index: 100;
     font-family: 'OpenSans-Bold', sans-serif;
@@ -145,8 +145,7 @@ header {
 }
 
 .stretchDrop {
-    // padding: 0;
-    // margin: 0;
+
     list-style: none;
     width: 1150px;
     position: relative;
@@ -223,7 +222,7 @@ header {
         overflow: hidden;
     }
 
-    
+
     &>li>div dl {
         // width: 120px;
         float: left;
@@ -237,7 +236,7 @@ header {
         font-size: 1rem;
         line-height: 25px;
         text-transform: uppercase;
-               
+
     }
 
     &>li>div dl dt a {
@@ -274,4 +273,190 @@ header {
     font-size: .9rem;
     margin: 0;
     border-radius: 30px;
+}
+
+// **************************************END MENU ROULANT *********************************
+
+// -----------------------------------BARRE DE RECHERCHE -----------------------------------
+
+.search-contain {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid $secondary;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.search-title {
+    font-size: 1.8rem;
+    font-family: 'OpenSans-Bold', sans-serif;
+    text-align: center;
+    font-style: italic;
+    color: $primary;
+
+}
+
+.citation {
+    font-size: 1.3rem;
+    font-family: 'OpenSans-Bold', sans-serif;
+    font-style: italic;
+    text-align: center;
+    color: $secondary;
+    padding: 30px;
+
+    .name {
+        font-size: 1.5rem;
+        font-family: 'OpenSans-Bold', sans-serif;
+        text-transform: uppercase;
+        color: $primary;
+    }
+
+}
+
+input,
+button {
+    border: none;
+    background: none;
+    outline: 0;
+}
+
+button {
+    cursor: pointer;
+
+}
+
+.SearchBar-input::placeholder {
+    color: white;
+    font-style: italic;
+    opacity: .6;
+
+}
+
+.search-bar {
+    height: 3em;
+    display: flex;
+    border-radius: 4em;
+    background-color: #f7953c;
+
+
+
+    &:hover .SearchBar-input {
+        padding-left: 2em;
+        padding-right: 1em;
+        width: 400px;
+    }
+
+    .SearchBar-input {
+        width: 0;
+        font-size: 1.2em;
+        color: white;
+        transition: .45s;
+
+    }
+
+    .SearchBar-button {
+        display: flex;
+        border-radius: 50%;
+        width: 4em;
+        height: 3.5em;
+        background-color: $primary;
+        transition: .3s;
+
+        &:active {
+            transform: scale(.85);
+        }
+
+    }
+
+    .SearchBar-icon {
+        margin: auto;
+        color: #fff;
+    }
+
+}
+
+// ************************************END BARRE DE RECHERCHE *********************************
+
+// ------------------------------------ DERNIERES RECETTES ----------------------------------
+.last-recipe {
+    width: 100%;
+    height: auto;
+}
+
+.new-recipe {
+    font-family: 'OpenSans-Bold', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 600;
+    padding: 20px;
+}
+
+.card {
+    max-width: 300px;
+    height: auto;
+    position: relative;
+    padding: 20px;
+    box-shadow: 0px 0px 20px 2px #000;
+    border-radius: 20px;
+
+    .header {
+        background: url(../img/nouilles.jpg);
+        background-size: cover;
+        min-height: 200px;
+
+        .icon.icons {
+            position: absolute;
+                      
+            color: black;
+            font-size: 1rem;
+            font-weight: bold;
+            padding: 15px;
+          
+        }
+    }
+
+    .text {
+        .food {
+            
+            text-align: left;
+            font-weight: normal;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin: 5px 30px;
+        }
+
+        .fa-light.fa-clock {
+            color: grey;
+            margin: 0 30px;
+        }
+
+        .fa-light.fa-users {
+            color: grey;
+        }
+    }
+    
+    .info {
+        margin: 10px 30px;
+    }
+
+    a.btn {
+        display: block;
+        background: $button;
+        color: $new;
+        position: relative;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        text-align: center;
+        padding: 10px;
+        transition: 250ms;
+
+        &:hover {
+           
+            transition: 250ms;
+        }
+    }
 }
