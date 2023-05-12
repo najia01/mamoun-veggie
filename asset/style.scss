@@ -394,69 +394,134 @@ button {
     font-weight: 600;
     padding: 20px;
 }
-
 .card {
-    max-width: 300px;
-    height: auto;
+    background-image: url(../img/nouilles.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    // background-position: center;
+    box-shadow: (
+      1px 3px 3px rgba(0,0,0,0.2),
+      -1px -1px 4px rgba(0,0,0,0.2)
+    );
+    height: 300px;
     position: relative;
-    padding: 20px;
-    box-shadow: 0px 0px 20px 2px #000;
-    border-radius: 20px;
-
-    .header {
-        background: url(../img/nouilles.jpg);
-        background-size: cover;
-        min-height: 200px;
-
-        .icon.icons {
-            position: absolute;
-                      
-            color: black;
-            font-size: 1rem;
-            font-weight: bold;
-            padding: 15px;
+    transition: box-shadow 130ms ease-in-out;
+    width: 300px;
+  
+    &:hover {
+      box-shadow: (
+        2px 6px 6px rgba(0,0,0,0.2),
+        -1px -1px 7px rgba(0,0,0,0.2)
+      );
+    }
+  
+  
+    .favorite {
+      transition: all 111ms ease-in-out;
+  
+      svg {
+        fill: none;
+        height: 1em;
+        padding: 1px;
+        transition: all 111ms ease-in-out;
+        stroke: lightgray;
+        stroke-width: 12;
+        width: 1em;
+      }
+  
+      &:hover svg {
+        cursor: pointer;
+        stroke: tomato;
+      }
+  
+      &.js-is-selected svg {
+        fill: tomato;
+        stroke: tomato;
+      }
+    }
+  
+    .food-info {
+      background-color: white;
+      bottom: 0;
+      left: 0;
+      padding: 1em 2em 2em 1em;
+      position: absolute;
+      right: 0;
+  
+      p {
+        margin: 0;
+  
+        span {
+          color: gray;
+          font-size: 14px;
+        }
+      }
+  
+      .favorite {
+        position: absolute;
+        right: 10px;
+        top: 10px;
+      }
+    }
+  }
+  
+// .card {
+//     position: relative;
+   
+//     max-width: 300px;
+//     margin: 20px auto;
+//     box-shadow: 0px 0px 30px 2px #000;
+//     .header {
+//        background: url(../img/nouilles.jpg);
+//        background-size: cover;
+//        min-height: 350px;
+//           .icon a .fa-heart-o {
+//           position: absolute;
+//           left: 85%;
+//           bottom: 30.7%;
           
-        }
-    }
-
-    .text {
-        .food {
-            
-            text-align: left;
-            font-weight: normal;
-            text-transform: uppercase;
-            letter-spacing: 0.1em;
-            margin: 5px 30px;
-        }
-
-        .fa-light.fa-clock {
-            color: grey;
-            margin: 0 30px;
-        }
-
-        .fa-light.fa-users {
-            color: grey;
-        }
-    }
-    
-    .info {
-        margin: 10px 30px;
-    }
-
-    a.btn {
-        display: block;
-        background: $button;
-        color: $new;
-        position: relative;
-        text-transform: uppercase;
-        letter-spacing: 0.1em;
-        text-align: center;
-        padding: 10px;
-        transition: 250ms;
-
-        &:hover {
-           
-            transition: 250ms;
-        }
-    }
-}
+         
+//           font-size: 1.3em;
+//           font-weight: bold;
+//           padding: 15px;
+//           border-radius: 50%;
+//           box-shadow: 0px 5px 30px 1px $heart;
+//        }
+//     }
+//     .text {
+//        .food {
+//           color: $black;
+//           text-align: left;
+//           font-weight: normal;
+//           text-transform: uppercase;
+//           letter-spacing: 0.1em;
+//           margin: 5px 30px;
+//        }
+//        .fa-clock-o {
+//           color: $gray;
+//           margin: 0 30px;
+//        }
+//        .fa-users {
+//           color: $gray;
+//        }
+//     }
+   
+//     .info {
+//        margin: 10px 30px;
+//     }
+//     a.btn {
+//        display: block;
+//        background: $button;
+//        color: $white;
+//        position: relative;
+//        text-transform: uppercase;
+//        letter-spacing: 0.1em;
+//        text-align: center;
+//        padding: 10px;
+//        transition: 250ms;
+//        &:hover {
+//           background: $heart;
+//           transition: 250ms;
+//        }
+//     }
+//  }

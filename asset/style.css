@@ -324,23 +324,55 @@ button {
 }
 
 .card {
-  max-width: 300px;
-  height: auto;
-  position: relative;
-  padding: 20px;
-  box-shadow: 0px 0px 20px 2px #000;
-  border-radius: 20px;
-}
-.card .header {
-  background: url(../img/nouilles.jpg);
+  background-image: url(../img/nouilles.jpg);
+  background-repeat: no-repeat;
   background-size: cover;
-  min-height: 200px;
+  box-shadow: 1px 3px 3px rgba(0, 0, 0, 0.2), -1px -1px 4px rgba(0, 0, 0, 0.2);
+  height: 300px;
+  position: relative;
+  transition: box-shadow 130ms ease-in-out;
+  width: 300px;
 }
-.card .header .icon a.fa-sharp .fa-light .fa-heart {
+.card:hover {
+  box-shadow: 2px 6px 6px rgba(0, 0, 0, 0.2), -1px -1px 7px rgba(0, 0, 0, 0.2);
+}
+.card .favorite {
+  transition: all 111ms ease-in-out;
+}
+.card .favorite svg {
+  fill: none;
+  height: 1em;
+  padding: 1px;
+  transition: all 111ms ease-in-out;
+  stroke: lightgray;
+  stroke-width: 12;
+  width: 1em;
+}
+.card .favorite:hover svg {
+  cursor: pointer;
+  stroke: tomato;
+}
+.card .favorite.js-is-selected svg {
+  fill: tomato;
+  stroke: tomato;
+}
+.card .food-info {
+  background-color: white;
+  bottom: 0;
+  left: 0;
+  padding: 1em 2em 2em 1em;
   position: absolute;
-  color: black;
-  font-size: 1rem;
-  font-weight: bold;
-  padding: 15px;
-  border-radius: 50%;
+  right: 0;
+}
+.card .food-info p {
+  margin: 0;
+}
+.card .food-info p span {
+  color: gray;
+  font-size: 14px;
+}
+.card .food-info .favorite {
+  position: absolute;
+  right: 10px;
+  top: 10px;
 }/*# sourceMappingURL=style.css.map */
