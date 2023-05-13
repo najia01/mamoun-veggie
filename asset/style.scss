@@ -383,145 +383,202 @@ button {
 // ************************************END BARRE DE RECHERCHE *********************************
 
 // ------------------------------------ DERNIERES RECETTES ----------------------------------
+
 .last-recipe {
     width: 100%;
     height: auto;
+
+    .new-recipe {
+        font-family: 'OpenSans-Bold', sans-serif;
+        font-size: 1.8rem;
+        font-weight: 600;
+        padding: 20px;
+    }
+
+    .card {
+        width: 350px;
+        height: 300px;
+        background-image: url(../img/nouilles.jpg);
+        background-repeat: no-repeat;
+        background-size: contain;
+
+        position: relative;
+        transition: box-shadow 130ms ease-in-out;
+
+
+        &:hover {
+            box-shadow: 2px 6px 6px rgba(0, 0, 0, 0.2), -1px -1px 7px rgba(0, 0, 0, 0.2);
+        }
+
+        .food-info {
+            background-color: white;
+            bottom: 0;
+            left: 0;
+            padding: 1em 2em 2em 1em;
+            position: absolute;
+            right: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            .recipe-title {
+                font-size: 2.2rem;
+                font-weight: 700;
+                margin-bottom: 0.5em;
+            }
+
+            .recipe-details {
+                color: gray;
+                font-size: 1.2rem;
+                margin-bottom: 0.5em;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+
+            .icon {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                font-size: 1.2rem;
+
+                .favorite {
+                    height: 20px;
+                    width: 20px;
+                    fill: none;
+                    stroke: lightgray;
+                    stroke-width: 2;
+                    margin-right: 0.5em;
+                    transition: stroke 250ms ease-in-out;
+                }
+
+                &:hover .favorite {
+                    stroke: tomato;
+                }
+            }
+        }
+    }
+
+    .btn {
+        display: block;
+
+        color: $primary;
+        position: relative;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        text-align: center;
+        padding: 10px;
+        transition: 250ms;
+
+        &:hover {
+
+            transition: 250ms;
+        }
+    }
 }
 
-.new-recipe {
-    font-family: 'OpenSans-Bold', sans-serif;
-    font-size: 1.8rem;
-    font-weight: 600;
-    padding: 20px;
-}
-.card {
-    background-image: url(../img/nouilles.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    // background-position: center;
-    box-shadow: (
-      1px 3px 3px rgba(0,0,0,0.2),
-      -1px -1px 4px rgba(0,0,0,0.2)
-    );
-    height: 300px;
-    position: relative;
-    transition: box-shadow 130ms ease-in-out;
-    width: 300px;
-  
-    &:hover {
-      box-shadow: (
-        2px 6px 6px rgba(0,0,0,0.2),
-        -1px -1px 7px rgba(0,0,0,0.2)
-      );
-    }
-  
-  
-    .favorite {
-      transition: all 111ms ease-in-out;
-  
-      svg {
-        fill: none;
-        height: 1em;
-        padding: 1px;
-        transition: all 111ms ease-in-out;
-        stroke: lightgray;
-        stroke-width: 12;
-        width: 1em;
-      }
-  
-      &:hover svg {
-        cursor: pointer;
-        stroke: tomato;
-      }
-  
-      &.js-is-selected svg {
-        fill: tomato;
-        stroke: tomato;
-      }
-    }
-  
-    .food-info {
-      background-color: white;
-      bottom: 0;
-      left: 0;
-      padding: 1em 2em 2em 1em;
-      position: absolute;
-      right: 0;
-  
-      p {
-        margin: 0;
-  
-        span {
-          color: gray;
-          font-size: 14px;
-        }
-      }
-  
-      .favorite {
-        position: absolute;
-        right: 10px;
-        top: 10px;
-      }
-    }
-  }
-  
-// .card {
+
+//   .card {
+//     background-image: url(../img/nouilles.jpg);
+//     background-repeat: no-repeat;
+//     background-size: cover;
 //     position: relative;
-   
-//     max-width: 300px;
-//     margin: 20px auto;
-//     box-shadow: 0px 0px 30px 2px #000;
-//     .header {
-//        background: url(../img/nouilles.jpg);
-//        background-size: cover;
-//        min-height: 350px;
-//           .icon a .fa-heart-o {
-//           position: absolute;
-//           left: 85%;
-//           bottom: 30.7%;
-          
-         
-//           font-size: 1.3em;
-//           font-weight: bold;
-//           padding: 15px;
-//           border-radius: 50%;
-//           box-shadow: 0px 5px 30px 1px $heart;
-//        }
+//     height: 300px;
+//     width: 350px;
+//     box-shadow: 1px 3px 3px rgba(0, 0, 0, 0.2), -1px -1px 4px rgba(0, 0, 0, 0.2);
+//     transition: box-shadow 130ms ease-in-out;
+
+//     &:hover {
+//       box-shadow: 2px 6px 6px rgba(0, 0, 0, 0.2), -1px -1px 7px rgba(0, 0, 0, 0.2);
 //     }
-//     .text {
-//        .food {
-//           color: $black;
-//           text-align: left;
-//           font-weight: normal;
-//           text-transform: uppercase;
-//           letter-spacing: 0.1em;
-//           margin: 5px 30px;
-//        }
-//        .fa-clock-o {
-//           color: $gray;
-//           margin: 0 30px;
-//        }
-//        .fa-users {
-//           color: $gray;
-//        }
+
+//     .food-info {
+//       position: absolute;
+//       bottom: 0;
+//       left: 0;
+//       right: 0;
+//       background-color: white;
+//       height: 100px;
+//       padding: 1em 2em 2em 1em;
+//       display: flex;
+//       align-items: center;
+//       justify-content: space-between;
+
+//       p {
+//         margin: 0;
+//         span {
+//           color: gray;
+//           font-size: 14px;
+//         }
+//       }
+
+//       .icon {
+//         position: absolute;
+//         right: 10px;
+//         top: 10px;
+//         display: flex;
+//         flex-direction: column;
+//         align-items: center;
+//         transition: all 111ms ease-in-out;
+
+//         & > svg {
+//           fill: none;
+//           height: 20px;
+//           padding: 1px;
+//           transition: all 111ms ease-in-out;
+//           stroke: lightgray;
+//           stroke-width: 12;
+//         }
+
+//         &:hover svg {
+//           cursor: pointer;
+//           stroke: tomato;
+//         }
+//       }
 //     }
-   
-//     .info {
-//        margin: 10px 30px;
+
+//     .recipe-title {
+//       position: absolute;
+//       bottom: 100px;
+//       left: 20px;
+//       color: white;
+//       font-size: 1.5rem;
+//       text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+//       text-transform: uppercase;
+//       z-index: 1;
 //     }
-//     a.btn {
-//        display: block;
-//        background: $button;
-//        color: $white;
-//        position: relative;
-//        text-transform: uppercase;
-//        letter-spacing: 0.1em;
-//        text-align: center;
-//        padding: 10px;
-//        transition: 250ms;
-//        &:hover {
-//           background: $heart;
-//           transition: 250ms;
-//        }
+
+//     .recipe-details {
+//       position: absolute;
+//       bottom: 10px;
+//       left: 20px;
+//       color: white;
+//       font-size: 0.9rem;
+//       text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+//       display: flex;
+//       align-items: center;
+
+//       svg {
+//         margin-right: 5px;
+//       }
 //     }
-//  }
+//   }
+
+//   a.btn {
+//     display: block;
+//     background: $button;
+//     color: $white;
+//     position: relative;
+//     text-transform: uppercase;
+//     letter-spacing: 0.1em;
+//     text-align: center;
+//     padding: 10px;
+//     transition: 250ms;
+
+//     &:hover {
+//       background: $heart;
+//       transition: 
+
+
+//     }
+// }
