@@ -12,6 +12,10 @@
     
     <link  href="{{ style }}style.css" rel="stylesheet">
     {% block stylesheets %}{% endblock %}
+
+    
+    <script src="{{ asset }} main.js"></script>
+    {% block javascripts %} {% endblock %}
         
 </head>
 
@@ -19,6 +23,9 @@
 
 {% include 'header.html.twig' %}
 {% block content %} {% endblock %}
+
+
+
 
 </body>
 
