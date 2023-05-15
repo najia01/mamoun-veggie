@@ -12,13 +12,13 @@ class RecipeController extends Controller
     }
 
 
-    // public function getOne($id)
-    // {
-    //     global $router;
-    //     $model = new RecipeModel();
-    //     $recipe = $model->getOneRecipe($id);
-    //     $link = $router->generate('getOneRecipe');
+    public function getOne(int $id)
+    {
+        global $router;
+        $model = new RecipeModel();
+        $recipe = $model->getOneRecipe($id);
+        // $link = $router->generate('getOneRecipe');
 
-    //     echo self::getTwig()->render('oneRecipe.html.twig', ['recipe' => $recipe, 'link'=> $link]);
-    // }
+        echo self::getTwig()->render('oneRecipe.html.twig', ['recipe' => $recipe]);
+    }
 }

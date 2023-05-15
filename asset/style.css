@@ -58,7 +58,7 @@ header ul.menu li {
   list-style-type: none;
 }
 header ul.menu li a {
-  font-family: "OpenSans-Bold";
+  font-family: "OpenSans-Bold", sans-serif;
   text-decoration: none;
   font-size: 1.2rem;
   color: black;
@@ -71,7 +71,7 @@ header ul.menu li #user-connect {
   height: 30px;
   border: none;
   border-radius: 20px;
-  font-family: "OpenSans-Bold";
+  font-family: "OpenSans-Bold", sans-serif;
   text-decoration: none;
   font-size: 1.1rem;
   color: black;
@@ -311,20 +311,36 @@ button {
   color: #fff;
 }
 
-.last-recipe {
-  width: 100%;
-  height: auto;
+#recipes-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
-.last-recipe .new-recipe {
+#recipes-section .new-recipe {
+  width: 100%;
+  text-align: center;
+  padding: 40px;
+  font-style: italic;
   font-family: "OpenSans-Bold", sans-serif;
   font-size: 1.8rem;
   font-weight: 600;
-  padding: 10px;
 }
-.last-recipe .card {
+#recipes-section .last-recipe {
+  width: calc(33.33% - 20px);
+  margin-bottom: 40px;
+}
+#recipes-section .last-recipe .recipe-title {
+  font-size: 1rem;
+  font-family: "OpenSans-Bold", sans-serif;
+  font-weight: 700;
+  margin-bottom: 0.5em;
+  font-style: italic;
+  padding: 20px;
+}
+#recipes-section .last-recipe .card {
   width: 350px;
+  margin-bottom: 20px;
   height: 400px;
-  background-image: url(../img/nouilles.jpg);
   background-repeat: no-repeat;
   background-size: contain;
   position: relative;
@@ -333,36 +349,35 @@ button {
   display: flex;
   justify-content: center;
 }
-.last-recipe .card:hover {
+#recipes-section .last-recipe .card > a {
+  height: 20px;
+  text-decoration: none;
+  text-align: center;
+  color: black;
+}
+#recipes-section .last-recipe .card:hover {
   box-shadow: 2px 6px 6px rgba(0, 0, 0, 0.2), -1px -1px 7px rgba(0, 0, 0, 0.2);
 }
-.last-recipe .card .food-info {
+#recipes-section .last-recipe .card .food-info {
   background-color: white;
-  bottom: 0;
+  bottom: 10%;
   position: absolute;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
-.last-recipe .card .food-info .recipe-title {
-  font-size: 1.2rem;
-  font-family: "OpenSans-Bold", sans-serif;
-  font-weight: 700;
-  margin-bottom: 0.5em;
-  font-style: italic;
-}
-.last-recipe .card .food-info .recipe-details {
+#recipes-section .last-recipe .card .food-info .recipe-details {
   color: gray;
   font-size: 0.9rem;
   margin-bottom: 0.5em;
   font-family: "OpenSans-Bold", sans-serif;
 }
-.last-recipe .card .food-info .icon {
+#recipes-section .last-recipe .card .food-info .icon {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.last-recipe .card .food-info .icon .favorite {
+#recipes-section .last-recipe .card .food-info .icon .favorite {
   height: 25px;
   width: 25px;
   fill: none;
@@ -371,10 +386,10 @@ button {
   margin-right: 0.5em;
   transition: stroke 250ms ease-in-out;
 }
-.last-recipe .card .food-info .icon:hover .favorite {
+#recipes-section .last-recipe .card .food-info .icon:hover .favorite {
   stroke: red;
 }
-.last-recipe .btn {
+#recipes-section .last-recipe .btn {
   display: block;
   color: #f7953c;
   position: relative;
@@ -383,82 +398,7 @@ button {
   text-align: center;
   padding: 10px;
 }
-.last-recipe .btn:hover {
+#recipes-section .last-recipe .btn:hover {
   opacity: 60%;
   color: #b54f2c;
-}
-.last-recipe .card {
-  width: 350px;
-  height: 400px;
-  background-image: url(../img/tortilla.jpg);
-  background-repeat: no-repeat;
-  background-size: contain;
-  position: relative;
-  border: 1px solid gray;
-  border-radius: 20px;
-  display: flex;
-  justify-content: center;
-}
-.last-recipe .card:hover {
-  box-shadow: 2px 6px 6px rgba(0, 0, 0, 0.2), -1px -1px 7px rgba(0, 0, 0, 0.2);
-}
-.last-recipe .card .food-info {
-  background-color: white;
-  bottom: 0;
-  position: absolute;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-.last-recipe .card .food-info .recipe-title {
-  font-size: 1.2rem;
-  font-family: "OpenSans-Bold", sans-serif;
-  font-weight: 700;
-  margin-bottom: 0.5em;
-  font-style: italic;
-}
-.last-recipe .card .food-info .recipe-details {
-  color: gray;
-  font-size: 0.9rem;
-  margin-bottom: 0.5em;
-  font-family: "OpenSans-Bold", sans-serif;
-}
-.last-recipe .card .food-info .icon {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.last-recipe .card .food-info .icon .favorite {
-  height: 25px;
-  width: 25px;
-  fill: none;
-  stroke: lightgray;
-  stroke-width: 2;
-  margin-right: 0.5em;
-  transition: stroke 250ms ease-in-out;
-}
-.last-recipe .card .food-info .icon:hover .favorite {
-  stroke: red;
-}
-.last-recipe .btn {
-  display: block;
-  color: #f7953c;
-  position: relative;
-  font-family: "OpenSans-Bold", sans-serif;
-  text-decoration: none;
-  text-align: center;
-  padding: 10px;
-}
-.last-recipe .btn:hover {
-  opacity: 60%;
-  color: #b54f2c;
-}
-.last-recipe .card:nth-child(1) .recipe-title {
-  content: "Recette #$i";
-}
-.last-recipe .card:nth-child(2) .recipe-title {
-  content: "Recette #$i";
-}
-.last-recipe .card:nth-child(3) .recipe-title {
-  content: "Recette #$i";
 }/*# sourceMappingURL=style.css.map */

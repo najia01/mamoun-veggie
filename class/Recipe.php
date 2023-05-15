@@ -35,7 +35,7 @@ class Recipe
     /**
      * Get the value of recipeId
      */ 
-    public function getRecipeId()
+    public function getRecipe_id()
     {
         return $this->recipe_Id;
     }
@@ -67,7 +67,7 @@ class Recipe
     /**
      * Get the value of cookingTime
      */ 
-    public function getCookingTime()
+    public function getCooking_time()
     {
         return $this->cookingTime;
     }
@@ -75,7 +75,7 @@ class Recipe
     /**
      * Get the value of numberOfCovers
      */ 
-    public function getNumberOfCovers()
+    public function getNumber_of_covers()
     {
         return $this->numberOfCovers;
     }
@@ -103,7 +103,7 @@ class Recipe
      *
      * @return  self
      */ 
-    public function setRecipeId($recipeId)
+    public function setRecipe_id($recipeId)
     {
         $this->recipe_Id = $recipeId;
 
@@ -151,7 +151,7 @@ class Recipe
      *
      * @return  self
      */ 
-    public function setCookingTime($cookingTime)
+    public function setCooking_time($cookingTime)
     {
         $this->cookingTime = $cookingTime;
 
@@ -163,7 +163,7 @@ class Recipe
      *
      * @return  self
      */ 
-    public function setNumberOfCovers($numberOfCovers)
+    public function setNumber_of_covers($numberOfCovers)
     {
         $this->numberOfCovers = $numberOfCovers;
 

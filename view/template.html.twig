@@ -1,4 +1,5 @@
-{% set style = '/projets/mamoun-veggie/asset/' %}
+ {% set style = '/projets/mamoun-veggie/asset/' %}
+ {% set image = '/projets/mamoun-veggie/img/' %}
 
 <!DOCTYPE html>
 <html lang="en">
@@ -13,7 +14,8 @@
     <link  href="{{ style }}style.css" rel="stylesheet">
     {% block stylesheets %}{% endblock %}
 
-    
+   
+
     <script src="{{ asset }} main.js"></script>
     {% block javascripts %} {% endblock %}
         

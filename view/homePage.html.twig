@@ -198,80 +198,39 @@
 
 {# ------------------- --DERNIERES RECETTES -------------------------- #}
 
-<div class="last-recipe">
-
-  <h2 class="new-recipe">Les dernières recettes</h2>
-
-  <div class="card">
-    <div class="food-info">
-      <h2 class="recipe-title">Nouilles sautées aux légumes</h2>
-      <p class="recipe-details">
-        <span>Temps de préparation: 20 min</span><br>
-        <span>Nombre de personnes: 2</span>
-      </p>
-      <div class="icon">
-        <svg class="favorite" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-          <path d="M12 21.5l-1.27-1.14C4.3 14.33 1.5 11.07 1.5 7.5 1.5 4.42 3.92 2 7 2c2.02 0 3.91 1.11 5 2.5C12.09 3.11 13.98 2 16 2c3.08 0 5.5 2.42 5.5 5.5 0 3.57-2.8 6.83-9.23 12.86L12 21.5z"/>
-        </svg>
+   <section id="recipes-section">
+   <h2 class="new-recipe">Les dernières recettes</h2>
+{% for recipe in recipes %}
+    <div class="last-recipe">
+	
+	<h3 class="recipe-title"></h3>
+      <div class="card" style="background-image: url({{ image }}{{ recipe.image }});">
+	
+    <a href="{{ link }}{{ recipe.recipe_id }}"><h3 class="recipe-title">{{ recipe.title }}</h3></a>
        
+        <div class="food-info">
+          <p class="recipe-details">
+            <span>Temps de préparation: {{ recipe.cooking_time }}</span><br>
+            <span>Nombre de personnes: {{ recipe.number_of_covers }}</span>
+          </p>
+		     <a href="#" class="btn">Voir la recette</a>
+        </div>
+        {# <div class="icon">
+          <svg class="favorite" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M12 21.5l-1.27-1.14C4.3 14.33 1.5 11.07 1.5 7.5 1.5 4.42 3.92 2 7 2c2.02 0 3.91 1.11 5 2.5C12.09 3.11 13.98 2 16 2c3.08 0 5.5 2.42 5.5 5.5 0 3.57-2.8 6.83-9.23 12.86L12 21.5z"/>
+          </svg>
+        </div> #}
+     
       </div>
-
-	  <a href="#" class="btn">Voir la recette</a>
+	  
     </div>
- 
-
- <div class="card">
-    <div class="food-info">
-      <h2 class="recipe-title">Tortilla aux falafels</h2>
-      <p class="recipe-details">
-        <span>Temps de préparation: 20 min</span><br>
-        <span>Nombre de personnes: 2</span>
-      </p>
-      <div class="icon">
-        <svg class="favorite" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-          <path d="M12 21.5l-1.27-1.14C4.3 14.33 1.5 11.07 1.5 7.5 1.5 4.42 3.92 2 7 2c2.02 0 3.91 1.11 5 2.5C12.09 3.11 13.98 2 16 2c3.08 0 5.5 2.42 5.5 5.5 0 3.57-2.8 6.83-9.23 12.86L12 21.5z"/>
-        </svg>
-       
-      </div>
-
-	  <a href="#" class="btn">Voir la recette</a>
-    </div>
- 
-
- <div class="card">
-    <div class="food-info">
-      <h2 class="recipe-title">Nouilles sautées aux légumes</h2>
-      <p class="recipe-details">
-        <span>Temps de préparation: 20 min</span><br>
-        <span>Nombre de personnes: 2</span>
-      </p>
-      <div class="icon">
-        <svg class="favorite" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-          <path d="M12 21.5l-1.27-1.14C4.3 14.33 1.5 11.07 1.5 7.5 1.5 4.42 3.92 2 7 2c2.02 0 3.91 1.11 5 2.5C12.09 3.11 13.98 2 16 2c3.08 0 5.5 2.42 5.5 5.5 0 3.57-2.8 6.83-9.23 12.86L12 21.5z"/>
-        </svg>
-       
-      </div>
-
-	  <a href="#" class="btn">Voir la recette</a>
-    </div>
- 
-
   
- </div>
+{% endfor %}  
 </div>
 
-
-
-
-
-
-
+</section>
+</div>
 
 </main>
-
-
-
-
-
-
- {% endblock %}
+{% endblock %}
+ 
