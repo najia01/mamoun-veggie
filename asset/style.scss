@@ -409,14 +409,6 @@ button {
         width: calc(33.33% - 20px);
         margin-bottom: 40px;
 
-        .recipe-title {
-            font-size: 1rem;
-            font-family: $font1;
-            font-weight: 700;
-            margin-bottom: 0.5em;
-            font-style: italic;
-            padding: 20px;
-        }
 
         .card {
             width: 350px;
@@ -436,6 +428,16 @@ button {
                 text-decoration: none;
                 text-align: center;
                 color: black;
+
+                &>.recipe-title {
+                    font-size: 1.2rem;
+                    font-family: $font1;
+                    font-weight: 700;
+                    color: #eee;
+                    font-style: italic;
+                    padding: 20px;
+                }
+
             }
 
             &:hover {
@@ -445,13 +447,11 @@ button {
 
             .food-info {
                 background-color: white;
-                bottom: 10%;
+                bottom: 0;
                 position: absolute;
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
-
-
 
                 .recipe-details {
                     color: gray;
@@ -461,20 +461,20 @@ button {
 
                 }
 
-                .icon {
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
+                &>.icon {
+                    height: 30px;
+                    width: 30px;
+                    margin: 0 auto;
 
-
-                    .favorite {
+                    svg.favorite {
                         height: 25px;
                         width: 25px;
-                        fill: none;
-                        stroke: lightgray;
-                        stroke-width: 2;
-                        margin-right: 0.5em;
-                        transition: stroke 250ms ease-in-out;
+                        fill:pink;
+                        stroke: pink;
+                        text-align: center;
+                        // stroke-width: 2;
+                        // margin-right: 0.5em;
+                        // transition: stroke 250ms ease-in-out;
                     }
 
                     &:hover .favorite {

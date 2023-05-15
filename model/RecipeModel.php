@@ -18,7 +18,7 @@ class RecipeModel extends Model{
     }
     public function getOneRecipe(int $id){
        
-        $req = $this->getDb()->prepare('SELECT `recipe_id`,`title`,`image`,`description`,`cooking_time` FROM `recipe` WHERE `id` = :id');
+        $req = $this->getDb()->prepare('SELECT `recipe_id`,`title`,`image`,`description`,`cooking_time` FROM `recipe` WHERE `recipe_id` = :id');
         $req->bindParam('id',$id,PDO::PARAM_INT);
         $req->execute();
 

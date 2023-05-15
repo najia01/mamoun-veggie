@@ -329,14 +329,6 @@ button {
   width: calc(33.33% - 20px);
   margin-bottom: 40px;
 }
-#recipes-section .last-recipe .recipe-title {
-  font-size: 1rem;
-  font-family: "OpenSans-Bold", sans-serif;
-  font-weight: 700;
-  margin-bottom: 0.5em;
-  font-style: italic;
-  padding: 20px;
-}
 #recipes-section .last-recipe .card {
   width: 350px;
   margin-bottom: 20px;
@@ -355,12 +347,20 @@ button {
   text-align: center;
   color: black;
 }
+#recipes-section .last-recipe .card > a > .recipe-title {
+  font-size: 1.2rem;
+  font-family: "OpenSans-Bold", sans-serif;
+  font-weight: 700;
+  color: #eee;
+  font-style: italic;
+  padding: 20px;
+}
 #recipes-section .last-recipe .card:hover {
   box-shadow: 2px 6px 6px rgba(0, 0, 0, 0.2), -1px -1px 7px rgba(0, 0, 0, 0.2);
 }
 #recipes-section .last-recipe .card .food-info {
   background-color: white;
-  bottom: 10%;
+  bottom: 0;
   position: absolute;
   display: flex;
   flex-direction: column;
@@ -372,21 +372,19 @@ button {
   margin-bottom: 0.5em;
   font-family: "OpenSans-Bold", sans-serif;
 }
-#recipes-section .last-recipe .card .food-info .icon {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+#recipes-section .last-recipe .card .food-info > .icon {
+  height: 30px;
+  width: 30px;
+  margin: 0 auto;
 }
-#recipes-section .last-recipe .card .food-info .icon .favorite {
+#recipes-section .last-recipe .card .food-info > .icon svg.favorite {
   height: 25px;
   width: 25px;
-  fill: none;
-  stroke: lightgray;
-  stroke-width: 2;
-  margin-right: 0.5em;
-  transition: stroke 250ms ease-in-out;
+  fill: pink;
+  stroke: pink;
+  text-align: center;
 }
-#recipes-section .last-recipe .card .food-info .icon:hover .favorite {
+#recipes-section .last-recipe .card .food-info > .icon:hover .favorite {
   stroke: red;
 }
 #recipes-section .last-recipe .btn {
