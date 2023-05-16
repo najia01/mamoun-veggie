@@ -1,7 +1,20 @@
 {% extends "template.html.twig" %}
 
-{% block title %} Mamoun Veggie {% endblock %}
+{% set style = '/projets/mamoun-veggie/asset/' %}
 
 {% block stylesheets %}
-    <link  href="{{style}} asset/style.css" rel="stylesheet">
-    {% endblock %}
+    <link href="{{ style }}onerecipe.css" rel="stylesheet">
+{% endblock %}
+
+{% block content %}
+    <div class="card" style="background-image: url({{ image }}{{ recipe.image }});">
+        <a href="{{ link }}{{ recipe.recipe_id }}"><h3 class="recipe-title">{{ recipe.title }}</h3></a>
+        <div class="food-info">
+            <p class="recipe-details">
+                <span>Temps de préparation: {{ recipe.cooking_time }}</span><br>
+                <span>Nombre de personnes: {{ recipe.number_of_covers }}</span>
+            </p>
+            {{ recipe.description }}
+        </div>
+    </div>
+{% endblock %}

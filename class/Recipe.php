@@ -5,10 +5,10 @@ class Recipe
     private $image;
     private $title;
     private $description;
-    private $cookingTime;
-    private $numberOfCovers;
-    private $publicationDate;
-    private $userId;
+    private $cooking_Time;
+    private $number_Of_Covers;
+    private $publication_Date;
+    private $user_Id;
     
 
 
@@ -69,7 +69,7 @@ class Recipe
      */ 
     public function getCooking_time()
     {
-        return $this->cookingTime;
+        return $this->cooking_Time;
     }
 
     /**
@@ -77,23 +77,23 @@ class Recipe
      */ 
     public function getNumber_of_covers()
     {
-        return $this->numberOfCovers;
+        return $this->number_Of_Covers;
     }
 
     /**
      * Get the value of publicationDate
      */ 
-    public function getPublicationDate()
+    public function getPublication_Date()
     {
-        return $this->publicationDate;
+        return $this->publication_Date;
     }
 
     /**
      * Get the value of userId
      */ 
-    public function getUserId()
+    public function getUser_Id()
     {
-        return $this->userId;
+        return $this->user_Id;
     }
 
 // *********************************************************************SETTER********************************************************
@@ -103,9 +103,9 @@ class Recipe
      *
      * @return  self
      */ 
-    public function setRecipe_id($recipeId)
+    public function setRecipe_Id($recipe_Id)
     {
-        $this->recipe_Id = $recipeId;
+        $this->recipe_Id = $recipe_Id;
 
         return $this;
     }
@@ -151,9 +151,9 @@ class Recipe
      *
      * @return  self
      */ 
-    public function setCooking_time($cookingTime)
+    public function setCooking_time($cooking_Time)
     {
-        $this->cookingTime = $cookingTime;
+        $this->cooking_Time = $cooking_Time;
 
         return $this;
     }
@@ -163,9 +163,9 @@ class Recipe
      *
      * @return  self
      */ 
-    public function setNumber_of_covers($numberOfCovers)
+    public function setNumber_of_covers($number_Of_Covers)
     {
-        $this->numberOfCovers = $numberOfCovers;
+        $this->number_Of_Covers = $number_Of_Covers;
 
         return $this;
     }
@@ -175,9 +175,9 @@ class Recipe
      *
      * @return  self
      */ 
-    public function setPublicationDate($publicationDate)
+    public function setPublication_Date($publication_Date)
     {
-        $this->publicationDate = $publicationDate;
+        $this->publication_Date = $publication_Date;
 
         return $this;
     }
@@ -187,9 +187,9 @@ class Recipe
      *
      * @return  self
      */ 
-    public function setUserId($userId)
+    public function setUser_Id($user_Id)
     {
-        $this->userId = $userId;
+        $this->user_Id = $user_Id;
 
         return $this;
     }

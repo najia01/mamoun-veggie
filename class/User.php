@@ -1,11 +1,11 @@
 <?php
 class User
 {
-    private $userId;
+    private $user_Id;
     private $username;
     private $mail;
     private $password;
-    private $dateOfBirth;
+    private $date_Of_Birth;
 
 
     public function __construct(array $datas)
@@ -31,9 +31,9 @@ class User
     /**
      * Get the value of userId
      */
-    public function getUserId()
+    public function getUser_Id()
     {
-        return $this->userId;
+        return $this->user_Id;
     }
 
     /**
@@ -63,9 +63,9 @@ class User
     /**
      * Get the value of dateOfBirth
      */
-    public function getDateOfBirth()
+    public function getDate_of_birth()
     {
-        return $this->dateOfBirth;
+        return $this->date_Of_Birth;
     }
 
 
@@ -76,9 +76,9 @@ class User
      *
      * @return  self
      */
-    public function setUserId($userId)
+    public function setUser_Id($user_Id)
     {
-        $this->userId = $userId;
+        $this->user_Id = $user_Id;
 
         return $this;
     }
@@ -124,9 +124,9 @@ class User
      *
      * @return  self
      */
-    public function setDateOfBirth($dateOfBirth)
+    public function setDate_of_birth($date_Of_Birth)
     {
-        $this->dateOfBirth = $dateOfBirth;
+        $this->date_Of_Birth = $date_Of_Birth;
 
         return $this;
     }

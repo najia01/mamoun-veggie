@@ -1,9 +1,9 @@
 <?php
 class Favorites
 {
-    private $favoritesId;
-    private $userId;
-    private $recipeId;
+    private $favorites_Id;
+    private $user_Id;
+    private $recipe_Id;
 
     
     public function __construct(array $datas)
@@ -30,25 +30,25 @@ class Favorites
     /**
      * Get the value of favoritesId
      */ 
-    public function getFavoritesId()
+    public function getFavorites_Id()
     {
-        return $this->favoritesId;
+        return $this->favorites_Id;
     }
 
     /**
      * Get the value of userId
      */ 
-    public function getUserId()
+    public function getUser_Id()
     {
-        return $this->userId;
+        return $this->user_Id;
     }
 
     /**
      * Get the value of recipeId
      */ 
-    public function getRecipeId()
+    public function getRecipe_Id()
     {
-        return $this->recipeId;
+        return $this->recipe_Id;
     }
 
 
@@ -61,9 +61,9 @@ class Favorites
      *
      * @return  self
      */ 
-    public function setFavoritesId($favoritesId)
+    public function setFavorites_Id($favorites_Id)
     {
-        $this->favoritesId = $favoritesId;
+        $this->favorites_Id = $favorites_Id;
 
         return $this;
     }
@@ -73,9 +73,9 @@ class Favorites
      *
      * @return  self
      */ 
-    public function setUserId($userId)
+    public function setUser_Id($user_Id)
     {
-        $this->userId = $userId;
+        $this->user_Id = $user_Id;
 
         return $this;
     }
@@ -85,9 +85,9 @@ class Favorites
      *
      * @return  self
      */ 
-    public function setRecipeId($recipeId)
+    public function setRecipe_Id($recipe_Id)
     {
-        $this->recipeId = $recipeId;
+        $this->recipe_Id = $recipe_Id;
 
         return $this;
     }

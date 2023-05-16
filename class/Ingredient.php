@@ -1,7 +1,7 @@
 <?php
 class Ingredient
 {
-    private $ingredientId;
+    private $ingredient_Id;
     private $name;
     
 
@@ -29,9 +29,9 @@ class Ingredient
     /**
      * Get the value of ingredientId
      */ 
-    public function getIngredientId()
+    public function getIngredient_Id()
     {
-        return $this->ingredientId;
+        return $this->ingredient_Id;
     }
 
     /**
@@ -50,9 +50,9 @@ class Ingredient
      *
      * @return  self
      */ 
-    public function setIngredientId($ingredientId)
+    public function setIngredient_Id($ingredient_Id)
     {
-        $this->ingredientId = $ingredientId;
+        $this->ingredient_Id = $ingredient_Id;
 
         return $this;
     }

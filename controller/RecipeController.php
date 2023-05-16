@@ -16,9 +16,11 @@ class RecipeController extends Controller
     {
         global $router;
         $model = new RecipeModel();
-        $recipe = $model->getOneRecipe($id);
+        
+        // $recipe = $model->getOneRecipe($id);
+        $datas = $model->getOneRecipe($id);
         // $link = $router->generate('getOneRecipe');
-
-        echo self::getTwig()->render('oneRecipe.html.twig', ['recipe' => $recipe]);
+        
+        echo self::getTwig()->render('oneRecipe.html.twig', ['recipe' => $datas]);
     }
 }

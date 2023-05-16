@@ -1,7 +1,7 @@
 <?php
 class Category
 {
-    private $categoryId;
+    private $category_Id;
     private $title;
     
 
@@ -28,9 +28,9 @@ class Category
     /**
      * Get the value of categoryId
      */ 
-    public function getCategoryId()
+    public function getCategory_Id()
     {
-        return $this->categoryId;
+        return $this->category_Id;
     }
 
     /**
@@ -48,9 +48,9 @@ class Category
      *
      * @return  self
      */ 
-    public function setCategoryId($categoryId)
+    public function setCategory_Id($category_Id)
     {
-        $this->categoryId = $categoryId;
+        $this->category_Id = $category_Id;
 
         return $this;
     }

@@ -16,10 +16,10 @@ class RecipeModel extends Model{
         return $recipes;
         
     }
-    public function getOneRecipe(int $id){
+    public function getOneRecipe(int $recipe_id){
        
         $req = $this->getDb()->prepare('SELECT `recipe_id`,`title`,`image`,`description`,`cooking_time` FROM `recipe` WHERE `recipe_id` = :id');
-        $req->bindParam('id',$id,PDO::PARAM_INT);
+        $req->bindParam('id',$recipe_id,PDO::PARAM_INT);
         $req->execute();
 
         $recipe = new Recipe($req->fetch(PDO::FETCH_ASSOC));
