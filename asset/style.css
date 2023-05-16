@@ -314,7 +314,7 @@ button {
 #recipes-section {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 #recipes-section .new-recipe {
   width: 100%;
@@ -326,7 +326,6 @@ button {
   font-weight: 600;
 }
 #recipes-section .last-recipe {
-  width: calc(33.33% - 20px);
   margin-bottom: 40px;
 }
 #recipes-section .last-recipe .card {

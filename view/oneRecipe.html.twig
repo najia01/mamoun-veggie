@@ -7,14 +7,25 @@
 {% endblock %}
 
 {% block content %}
+
+ <h3 class="recipe-title">{{ recipe.title }}</h3>
+<div class="last-recipe">
+ 
     <div class="card" style="background-image: url({{ image }}{{ recipe.image }});">
-        <a href="{{ link }}{{ recipe.recipe_id }}"><h3 class="recipe-title">{{ recipe.title }}</h3></a>
+        {# <a href="{{ link }}{{ recipe.recipe_id }}"></a> #}
+        </div>
         <div class="food-info">
-            <p class="recipe-details">
+            <div class="recipe-details">
                 <span>Temps de préparation: {{ recipe.cooking_time }}</span><br>
                 <span>Nombre de personnes: {{ recipe.number_of_covers }}</span>
-            </p>
-            {{ recipe.description }}
+          
+           <p class="description"> {{ recipe.description }} </p>
+            {{ recipe.ingredient_id }}
+            {{ recipe.publication_date }}
+            {{ recipe.username }}
+
+
         </div>
+    </div>
     </div>
 {% endblock %}

@@ -45,6 +45,8 @@ class ComposerStaticInite2fbfab5839d9dde078e371a1c3a4943
         'Controller' => __DIR__ . '/../..' . '/controller/Controller.php',
         'Favorites' => __DIR__ . '/../..' . '/class/Favorites.php',
         'Ingredient' => __DIR__ . '/../..' . '/class/Ingredient.php',
+        'IngredientController' => __DIR__ . '/../..' . '/controller/IngredientController.php',
+        'IngredientModel' => __DIR__ . '/../..' . '/model/IngredientModel.php',
         'Model' => __DIR__ . '/../..' . '/model/Model.php',
         'Recipe' => __DIR__ . '/../..' . '/class/Recipe.php',
         'RecipeController' => __DIR__ . '/../..' . '/controller/RecipeController.php',

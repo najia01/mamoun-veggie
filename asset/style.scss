@@ -389,7 +389,7 @@ button {
 #recipes-section {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-around;
 
 
 
@@ -406,7 +406,7 @@ button {
 
     .last-recipe {
 
-        width: calc(33.33% - 20px);
+        // width: calc(33.33% - 20px);
         margin-bottom: 40px;
 
 

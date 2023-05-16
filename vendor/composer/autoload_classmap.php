@@ -12,6 +12,8 @@ return array(
     'Controller' => $baseDir . '/controller/Controller.php',
     'Favorites' => $baseDir . '/class/Favorites.php',
     'Ingredient' => $baseDir . '/class/Ingredient.php',
+    'IngredientController' => $baseDir . '/controller/IngredientController.php',
+    'IngredientModel' => $baseDir . '/model/IngredientModel.php',
     'Model' => $baseDir . '/model/Model.php',
     'Recipe' => $baseDir . '/class/Recipe.php',
     'RecipeController' => $baseDir . '/controller/RecipeController.php',

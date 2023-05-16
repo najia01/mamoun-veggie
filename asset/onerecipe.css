@@ -1,0 +1,68 @@
+*,
+before,
+after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  padding: 10px;
+  height: auto;
+}
+
+@font-face {
+  font-family: "OpenSans-bold";
+  src: url(../fonts/OpenSans-Bold.ttf);
+}
+@font-face {
+  font-family: "OpenSans-Regular";
+  src: url(../fonts/OpenSans-Regular.ttf);
+}
+.recipe-title {
+  font-size: 1.5rem;
+  font-family: "OpenSans-Bold", sans-serif;
+  font-weight: 700;
+  font-style: italic;
+  text-align: center;
+  padding: 20px;
+}
+
+.last-recipe {
+  width: 1300px;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+.last-recipe > .card {
+  width: 600px;
+  height: 400px;
+  background-size: cover;
+  position: relative;
+  border: 1px solid gray;
+  border-radius: 20px;
+}
+.last-recipe .food-info {
+  width: 500px;
+  /* height: 200px; */
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  margin-left: 30px;
+}
+.last-recipe .food-info .recipe-details {
+  margin-bottom: 0.5em;
+}
+.last-recipe .food-info .recipe-details span {
+  color: gray;
+  font-size: 1.1rem;
+  font-family: "OpenSans-Bold", sans-serif;
+}
+.last-recipe .food-info .recipe-details > .description {
+  padding: 20px;
+  font-size: 1rem;
+  font-family: "OpenSans-Regular", sans-serif;
+  font-weight: 600;
+  text-align: justify;
+}/*# sourceMappingURL=onerecipe.css.map */
