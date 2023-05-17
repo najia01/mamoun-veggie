@@ -8,7 +8,8 @@ class RecipeController extends Controller
         $model = new RecipeModel();
         $datas = $model->getRecipe();
         $link = $router->generate('baseRecipe');
-        echo self::getTwig()->render('homePage.html.twig',['recipes' => $datas,'link'=>$link]);
+        $linkConnexion = $router->generate('baseUser');
+        echo self::getTwig()->render('homePage.html.twig',['recipes' => $datas,'linkConnexion'=>$linkConnexion,'link'=>$link]);
     }
 
 
@@ -18,8 +19,7 @@ class RecipeController extends Controller
         $model = new RecipeModel();
                 
         $datas = $model->getOneRecipe($id);
-       
-        
+               
         echo self::getTwig()->render('oneRecipe.html.twig', ['recipe' => $datas]);
     }
 }

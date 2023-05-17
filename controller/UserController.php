@@ -2,13 +2,21 @@
 
 class UserController extends Controller
 {
-    public function userLogin(int $id)
+    public function userLogin()
     {
+        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+            $username = $_POST['username'];
+            $password = $_POST['password'];
+            $model = new UserModel();
+         $datas = $model->getUser($username);
+        }
+
+
         global $router;
-        $model = new UserModel();
-        $datas = $model->getUser($id);
+
+       
 
         $link = $router->generate('baseUser');
-        echo self::getTwig()->render('homePage.html.twig', ['users' => $datas, 'link' => $link]);
+        echo self::getTwig()->render('connect.html.twig', ['link' => $link]);
     }
 }

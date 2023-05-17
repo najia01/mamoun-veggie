@@ -1,5 +1,81 @@
-<form action="login.php" method="post">
+{# {% extends "template.html.twig" %} #}
+
+{% set style = '/projets/mamoun-veggie/asset/' %}
+
+{% block stylesheets %}
+  <link href="{{ style }}connect.css" rel="stylesheet">
+{% endblock %}
+
+
+{% block content %}
+
+  <div class="cont">
+  {# <form action="#" method="post"> #}
+    <div class="form sign-in">
+      <h2>Ravi de revoir</h2>
+      <label>
+        <span>Pseudo</span>
+        <input type="pseudo"/>
+      </label>
+      <label>
+        <span>Mot de passe</span>
+        <input type="password"/>
+      </label>
+      <p class="forgot-pass">J'ai oublié mon mot de passe?</p>
+      <button type="button" class="submit">Se connecter</button>
+      <button type="button" class="fb-btn">Connexion <span>Facebook</span></button>
+      <button type="button" class="gmail-btn">Connexion <span>Gmail</span></button>
+      <button type="button" class="apple-btn">Connexion <span>Apple</span></button>
+    </div>
+    <div class="sub-cont">
+      <div class="img">
+        <div class="img__text m--up">
+          <h2>Nouveau ici?</h2>
+          <p>N'hésitez pas à vous inscrire afin de pouvoir profiter de toutes les fonctionnalités du site Mamoun Veggie!</p>
+        </div>
+        <div class="img__text m--in">
+          <h2>Déjà parmi nous?</h2>
+          <p>Si vous possédez un compte!C'est juste ici!</p>
+        </div>
+        <div class="img__btn">
+          <span class="m--up">S'inscrire</span>
+          <span class="m--in">Se connecter</span>
+        </div>
+      </div>
+      <div class="form sign-up">
+        <label>
+          <span>Nom</span>
+          <input type="text" />
+        </label>
+        <label>
+          <span>Email</span>
+          <input type="email" />
+        </label>
+        <label>
+          <span>Mot de passe</span>
+          <input type="password" />
+        </label>
+        <button type="button" class="submit">S'inscrire</button>
+        <button type="button" class="fb-btn"> S'inscrire avec<span>Facebook</span></button>
+        <button type="button" class="gmail-btn">S'inscrire avec <span>Gmail</span></button>
+        <button type="button" class="apple-btn">S'inscrire avec <span>Apple</span></button>
+      </div>
+    </div>
+  {# </form> #}
+
+
+
+  {# <form action="#" method="post">
     <input type="text" name="username" placeholder="Nom d'utilisateur">
     <input type="password" name="password" placeholder="Mot de passe">
     <button type="submit">Se connecter</button>
-</form>
+</form> #}
+
+{% endblock %}
+ 
+{% block javascripts %}
+<script src="{{('./main.js')}}"></script>
+{% endblock %}   
+
+
+

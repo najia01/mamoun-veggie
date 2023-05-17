@@ -1,6 +1,7 @@
  {% set style = '/projets/mamoun-veggie/asset/' %}
  {% set javascripts = '/projets/mamoun-veggie/asset/' %}
  {% set image = '/projets/mamoun-veggie/img/' %}
+ {% set action = '/projets/mamoun-veggie/' %}
 
 <!DOCTYPE html>
 <html lang="en">
@@ -14,21 +15,22 @@
     
     <link  href="{{ style }}style.css" rel="stylesheet">
     {% block stylesheets %}{% endblock %}
-
    
-    <script src="{{ javascripts }}main.js"></script>
-    {% block javascripts %} {% endblock %}
+   
         
 </head>
 
 <body>
 
 {% include 'header.html.twig' %}
-{% block content %}
- {% endblock %}
 
 
+{% block content %}{% endblock %}
+ 
 
+
+     <script src="../asset/main.js"></script>
+    {% block javascripts %}{% endblock %}
 
 </body>
 

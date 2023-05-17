@@ -9,7 +9,7 @@ $router->setBasePath('/projets/mamoun-veggie');
 $router->map( 'GET', '/','RecipeController#homePage','home');
 $router->map( 'GET', '/recipes/','','baseRecipe');
 $router->map( 'GET', '/recipes/[i:id]','RecipeController#getOne','getOneRecipe');
-$router->map( 'GET', '/users/[i:id]','UserController#userLogin','baseUser');
+$router->map( 'GET', '/connexion','UserController#userLogin','baseUser');
 
 
 

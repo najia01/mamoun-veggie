@@ -3,9 +3,11 @@
         "altorouter",
         "autoload",
         "classmap",
+        "connexion",
         "datas",
         "Erreur",
         "mamoun",
-        "projets"
+        "projets",
+        "signup"
     ]
 }
