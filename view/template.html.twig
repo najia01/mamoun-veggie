@@ -1,40 +1,34 @@
- {% set style = '/projets/mamoun-veggie/asset/' %}
- {% set javascripts = '/projets/mamoun-veggie/asset/' %}
- {% set image = '/projets/mamoun-veggie/img/' %}
- {% set action = '/projets/mamoun-veggie/' %}
+{% set style = '/projets/mamoun-veggie/asset/' %}
+{% set javascript = '/projets/mamoun-veggie/asset/' %}
+{% set image = '/projets/mamoun-veggie/img/' %}
+{% set action = '/projets/mamoun-veggie/' %}
 
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      {% block title %}
+      {% endblock %}
+    </title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% block title %}{% endblock %} </title>
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    
-    <link  href="{{ style }}style.css" rel="stylesheet">
-    {% block stylesheets %}{% endblock %}
-   
-   
-        
-</head>
+    <link href="{{ style }}style.css" rel="stylesheet" />
+    {% block stylesheets %}
+    {% endblock %}
+  </head>
 
-<body>
+  <body>
+    {% include 'header.html.twig' %}
 
-{% include 'header.html.twig' %}
+    {% block content %}
+    {% endblock %}
 
+    {% block javascript %}
+      <script src="{{ javascript }}main.js"></script>
+    {% endblock %}
 
-{% block content %}{% endblock %}
- 
-
-
-     <script src="../asset/main.js"></script>
-    {% block javascripts %}{% endblock %}
-
-</body>
-
-
-
-
+  </body>
 </html>

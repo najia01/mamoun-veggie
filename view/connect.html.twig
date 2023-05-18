@@ -1,50 +1,51 @@
-{# {% extends "template.html.twig" %} #}
+{% extends "template.html.twig" %}
 
 {% set style = '/projets/mamoun-veggie/asset/' %}
 
 {% block stylesheets %}
-  <link href="{{ style }}connect.css" rel="stylesheet">
+  <link href="{{ style }}connect.css" rel="stylesheet" />
 {% endblock %}
 
-
 {% block content %}
-
   <div class="cont">
-  {# <form action="#" method="post"> #}
     <div class="form sign-in">
-      <h2>Ravi de revoir</h2>
+      <h2>Ravi de vous revoir,</h2>
+      <form action="#" method="post">
       <label>
-        <span>Pseudo</span>
-        <input type="pseudo"/>
+        <span>Email</span>
+        <input type="email" />
       </label>
       <label>
-        <span>Mot de passe</span>
-        <input type="password"/>
+        <span>MOT DE PASSE</span>
+        <input type="password" />
       </label>
-      <p class="forgot-pass">J'ai oublié mon mot de passe?</p>
+      <p class="forgot-pass">Mot de passe oublié ?</p>
       <button type="button" class="submit">Se connecter</button>
-      <button type="button" class="fb-btn">Connexion <span>Facebook</span></button>
-      <button type="button" class="gmail-btn">Connexion <span>Gmail</span></button>
-      <button type="button" class="apple-btn">Connexion <span>Apple</span></button>
-    </div>
+      <button type="button" class="fb-btn"><a href="https://fr-fr.facebook.com/login/web/">Se connecter avec <span>facebook</span></a> </button>
+
+      <button type="button" class="gmail-btn"><a href="https://www.google.com/intl/fr/gmail/about/"> Se connecter avec <span>Gmail</span></a></button>
+      <button type="button" class="apple-btn"><a href="https://www.icloud.com/">Se connecter avec <span>Apple</span></a></button>
+   </div>
+    </form>
     <div class="sub-cont">
       <div class="img">
         <div class="img__text m--up">
-          <h2>Nouveau ici?</h2>
-          <p>N'hésitez pas à vous inscrire afin de pouvoir profiter de toutes les fonctionnalités du site Mamoun Veggie!</p>
+          <h2>Nouveau?</h2>
+          <p>Rejoignez la team du site <br> Mamoun Veggie!!</p>
         </div>
         <div class="img__text m--in">
-          <h2>Déjà parmi nous?</h2>
-          <p>Si vous possédez un compte!C'est juste ici!</p>
+          <h2>Déjà inscrit?</h2>
+          <p>Si vous possédez un compte! <br> C'est par ici !!</p>
         </div>
         <div class="img__btn">
-          <span class="m--up">S'inscrire</span>
-          <span class="m--in">Se connecter</span>
+          <span class="m--up">Inscription</span>
+          <span class="m--in">Connexion</span>
         </div>
       </div>
       <div class="form sign-up">
+      <form action="#" method="post">
         <label>
-          <span>Nom</span>
+          <span>NOM</span>
           <input type="text" />
         </label>
         <label>
@@ -52,30 +53,20 @@
           <input type="email" />
         </label>
         <label>
-          <span>Mot de passe</span>
+          <span>Password</span>
           <input type="password" />
         </label>
         <button type="button" class="submit">S'inscrire</button>
-        <button type="button" class="fb-btn"> S'inscrire avec<span>Facebook</span></button>
-        <button type="button" class="gmail-btn">S'inscrire avec <span>Gmail</span></button>
-        <button type="button" class="apple-btn">S'inscrire avec <span>Apple</span></button>
+        <button type="button" class="fb-btn"><a href="https://fr-fr.facebook.com/login/web/">Se connecter avec <span>facebook</span></a></button>
+        <button type="button" class="gmail-btn"><a href="https://www.google.com/intl/fr/gmail/about/">Se connecter avec <span>Gmail</span></a></button>
+        <button type="button" class="apple-btn"><a href="https://www.icloud.com/">Se connecter avec <span>Apple</span></a></button>
+
+        </form>
       </div>
     </div>
-  {# </form> #}
-
-
-
-  {# <form action="#" method="post">
-    <input type="text" name="username" placeholder="Nom d'utilisateur">
-    <input type="password" name="password" placeholder="Mot de passe">
-    <button type="submit">Se connecter</button>
-</form> #}
-
+  </div>
 {% endblock %}
- 
-{% block javascripts %}
-<script src="{{('./main.js')}}"></script>
-{% endblock %}   
 
-
-
+{% block javascript %}
+  <script src="{{ javascript }}main.js"></script>
+{% endblock %}

@@ -73,19 +73,24 @@ button {
     transition: transform 1.2s ease-in-out;
 
     @include signUpActive {
-        transform: translate3d(640px -1, 0, 0);
+        transform: translate3d(640px * -1, 0, 0);
     }
 }
 
 button {
     display: block;
-    margin: 0 auto;
+    margin: 10px auto;
     width: 260px;
-    height: 36px;
+    height: 40px;
     border-radius: 30px;
     color: #fff;
     font-size: 15px;
     cursor: pointer;
+
+    &>a{
+      text-decoration: none;
+    }
+   
 }
 
 .img {
@@ -105,7 +110,7 @@ button {
         top: 0;
         width: 900px;
         height: 100%;
-        background-image: url(../img/sign-in.jpg);
+        background-image: url(../img/sign-up.jpg);
         background-size: cover;
         transition: transform 1.2s ease-in-out;
     }
@@ -139,11 +144,13 @@ button {
 
         h2 {
             margin-bottom: 10px;
+            font-size: 1.8rem;
             font-weight: normal;
         }
 
         p {
-            font-size: 14px;
+          margin-top: 40px;
+            font-size: 1.2rem;
             line-height: 1.5;
         }
 
@@ -167,7 +174,7 @@ button {
         overflow: hidden;
         z-index: 2;
         position: relative;
-        width: 100px;
+        width: 120px;
         height: 36px;
         margin: 0 auto;
         background: transparent;
@@ -255,18 +262,19 @@ input {
 .submit {
     margin-top: 40px;
     margin-bottom: 20px;
-    background: #d4af7a;
+    background: $primary;
     text-transform: uppercase;
 }
 
 .fb-btn, .gmail-btn, .apple-btn {
     border: 2px solid #d3dae9;
-    color: darken(#d3dae9, 20%);
+    color: black;
+    background-color: $new;
     
 
     span {
         font-weight: bold;
-        color: darken(#768cb6, 20%);
+        color: $secondary;
     }
 }
 

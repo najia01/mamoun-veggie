@@ -56,18 +56,21 @@ button {
   transition: transform 1.2s ease-in-out;
 }
 .cont.s--signup .sub-cont {
-  transform: translate3d(640px -1, 0, 0);
+  transform: translate3d(-640px, 0, 0);
 }
 
 button {
   display: block;
-  margin: 0 auto;
+  margin: 10px auto;
   width: 260px;
-  height: 36px;
+  height: 40px;
   border-radius: 30px;
   color: #fff;
   font-size: 15px;
   cursor: pointer;
+}
+button > a {
+  text-decoration: none;
 }
 
 .img {
@@ -87,7 +90,7 @@ button {
   top: 0;
   width: 900px;
   height: 100%;
-  background-image: url(../img/sign-in.jpg);
+  background-image: url(../img/sign-up.jpg);
   background-size: cover;
   transition: transform 1.2s ease-in-out;
 }
@@ -116,10 +119,12 @@ button {
 }
 .img__text h2 {
   margin-bottom: 10px;
+  font-size: 1.8rem;
   font-weight: normal;
 }
 .img__text p {
-  font-size: 14px;
+  margin-top: 40px;
+  font-size: 1.2rem;
   line-height: 1.5;
 }
 .cont.s--signup .img__text.m--up {
@@ -135,7 +140,7 @@ button {
   overflow: hidden;
   z-index: 2;
   position: relative;
-  width: 100px;
+  width: 120px;
   height: 36px;
   margin: 0 auto;
   background: transparent;
@@ -214,17 +219,18 @@ input {
 .submit {
   margin-top: 40px;
   margin-bottom: 20px;
-  background: #d4af7a;
+  background: #f7953c;
   text-transform: uppercase;
 }
 
 .fb-btn, .gmail-btn, .apple-btn {
   border: 2px solid #d3dae9;
-  color: #8fa1c7;
+  color: black;
+  background-color: #ebded5;
 }
 .fb-btn span, .gmail-btn span, .apple-btn span {
   font-weight: bold;
-  color: #455a81;
+  color: #b54f2c;
 }
 
 .sign-in {
