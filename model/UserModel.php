@@ -3,7 +3,7 @@
 class UserModel extends Model
 {
 
-    public function getUser($username)
+    public function getUserByUsername($username)
     {
         $req = $this->getDb()->prepare('SELECT  `username`,`password` FROM `user`  WHERE `username` = :username');
         $req->bindParam('username', $username, PDO::PARAM_STR);

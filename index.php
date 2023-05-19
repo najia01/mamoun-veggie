@@ -10,6 +10,8 @@ $router->map( 'GET', '/','RecipeController#homePage','home');
 $router->map( 'GET', '/recipes/','','baseRecipe');
 $router->map( 'GET', '/recipes/[i:id]','RecipeController#getOne','getOneRecipe');
 $router->map( 'GET', '/connexion','UserController#userLogin','baseUser');
+$router->map('GET|POST', '/connexion', 'UserController#userLogin', 'userLogin');
+
 
 
 

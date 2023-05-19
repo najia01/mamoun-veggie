@@ -4,28 +4,27 @@ class UserController extends Controller
 {
     public function userLogin()
     {
-        $model = new UserModel();
-
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $username = $_POST['username'];
             $password = $_POST['password'];
-            $password = password_hash($password, PASSWORD_DEFAULT);
-            $mail = filter_var($_POST["mail"], FILTER_VALIDATE_EMAIL);
 
-            $userData = new User([
-                'username' => $username,
-                'password' => $password,
-                'mail' => $mail
-            ]);
+            $userModel = new UserModel();
+            $user = $userModel->getUserByUsername($username);
 
-            $user = ($userData);
-            $result = $model->getUser($user);
-            global $router;
-            header('Location:' . $router->generate('home'));
-            exit();
-
+            if ($user && password_verify($password, $user->getPassword())) {
+                // Authentification réussie
+                // Effectuer des actions nécessaires, par exemple :
+                // - Créer une session utilisateur
+                // - Rediriger l'utilisateur vers une page sécurisée
+                global $router;
+                header('Location: ' . $router->generate('home'));
+                exit();
+            } else {
+                // Authentification échouée
+                // Afficher un message d'erreur à l'utilisateur
+                echo "Identifiant ou mot de passe incorrect";
+            }
         } else {
-
             global $router;
             $link = $router->generate('baseUser');
             echo self::getTwig()->render('connect.html.twig', ['link' => $link]);

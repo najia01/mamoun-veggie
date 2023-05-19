@@ -36,13 +36,11 @@ button {
     font-family: $font;
 }
 
-
 @mixin signUpActive {
     .cont.s--signup & {
         @content;
     }
 }
-
 
 .cont {
     overflow: hidden;
