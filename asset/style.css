@@ -401,13 +401,12 @@ button {
 }
 
 .recommand {
-  margin: 0;
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
   align-items: center;
-  justify-content: center;
-  height: 100vh;
-  font-family: "Montserrat", sans-serif;
+  justify-content: space-evenly;
+  height: auto;
+  font-family: "OpenSans-Regular", sans-serif;
 }
 .recommand .title-recommand {
   width: 100%;
@@ -420,8 +419,9 @@ button {
 }
 .recommand .wrapper {
   display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  height: auto;
 }
 .recommand .card {
   width: 420px;
@@ -474,8 +474,6 @@ button {
   height: 100%;
   display: block;
   border-radius: 6px;
-  backface-visibility: hidden;
-  background: linear-gradient(40deg, rgba(67, 138, 243, 0.7), rgba(255, 242, 166, 0.7));
 }
 .recommand .front .inner {
   grid-template-rows: 5fr 1fr 1fr 2fr 1fr;
@@ -483,12 +481,14 @@ button {
 }
 .recommand .front h2 {
   grid-row: 2;
+  font-size: 1.8rem;
   margin-bottom: 0.3em;
   text-transform: uppercase;
   letter-spacing: 3px;
-  color: #fff;
-  font-weight: 500;
-  text-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
+  color: black;
+  font-weight: 700;
+  text-align: center;
+  text-shadow: 3px 3px 2px rgb(215, 90, 27);
 }
 .recommand .back {
   transform: rotateY(180deg);
@@ -497,7 +497,7 @@ button {
 }
 .recommand .back .inner {
   grid-template-rows: 1fr 2fr 1fr 2fr 14fr 1fr 1fr;
-  grid-template-columns: repeat(4, auto);
+  grid-template-columns: repeat(3, auto);
   grid-column-gap: 0.8em;
   justify-items: center;
 }
@@ -505,10 +505,10 @@ button {
   position: relative;
   display: flex;
   align-items: center;
-  color: #355cc9;
-  grid-row: 3;
+  color: orange;
+  flex-direction: column;
 }
-.recommand .back .info:not(:first-of-type):before {
+.recommand .back:not(:first-of-type):before {
   content: "";
   position: absolute;
   left: -0.9em;
@@ -516,29 +516,10 @@ button {
   width: 1px;
   background-color: #ccc;
 }
-.recommand .back .info span {
-  font-size: 2em;
+.recommand .back span {
   font-weight: 700;
 }
-.recommand .back .info i {
-  font-size: 1.2em;
-}
-.recommand .back .info i:before {
-  background: linear-gradient(40deg, #355cc9, rgb(67, 138, 243));
-  -webkit-text-fill-color: transparent;
-  -webkit-background-clip: text;
-}
-.recommand .back .info .icon {
-  margin-left: 0.3em;
-}
-.recommand .back .info .icon span {
-  display: block;
-  margin-top: -0.25em;
-  font-size: 0.8em;
-  font-weight: 600;
-  white-space: nowrap;
-}
-.recommand .back .description {
+.recommand .description {
   grid-row: 5;
   grid-column: 1/-1;
   font-size: 0.86em;
@@ -546,14 +527,15 @@ button {
   font-weight: 600;
   line-height: 1.4em;
   overflow: auto;
-  color: #355cc9;
+  color: #b54f2c;
   padding-right: 10px;
 }
-.recommand .back .button {
+.recommand .button {
   grid-column: 1/-1;
   justify-self: center;
 }
-.recommand .button {
+
+.button {
   grid-row: -1;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -565,8 +547,8 @@ button {
   line-height: 2.9em;
   min-width: 3em;
   background-color: transparent;
-  border: solid 2px #fff;
-  color: #fff;
+  border: solid 2px #b54f2c;
+  color: #f7953c;
   border-radius: 4px;
   text-align: center;
   left: 50%;
@@ -574,32 +556,75 @@ button {
   transition: 0.3s ease-in-out;
   text-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
 }
-.recommand .button:hover {
+.button:hover {
   background-color: #fff;
   box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
   text-shadow: none;
-  color: #355cc9;
+  color: #f7953c;
 }
-.recommand .button.return {
+.button.return {
   line-height: 3em;
-  color: #355cc9;
-  border-color: #355cc9;
+  color: #f7953c;
+  border-color: #b54f2c;
   text-shadow: none;
 }
-.recommand .button.return:hover {
-  background-color: #355cc9;
+.button.return:hover {
+  background-color: #f7953c;
   color: #fff;
   box-shadow: none;
 }
-.recommand ::-webkit-scrollbar {
+
+::-webkit-scrollbar {
   width: 5px;
 }
-.recommand ::-webkit-scrollbar-track {
+
+::-webkit-scrollbar-track {
   background: #f1f1f1;
 }
-.recommand ::-webkit-scrollbar-thumb {
-  background: #859ddf;
+
+::-webkit-scrollbar-thumb {
+  background: #d0d3da;
 }
-.recommand ::-webkit-scrollbar-thumb:hover {
-  background: #355cc9;
+
+::-webkit-scrollbar-thumb:hover {
+  background: #989eac;
+}
+
+.pagination {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0;
+  padding: 10px;
+  background-color: #fff;
+  border-radius: 40px;
+  box-shadow: 0 5px 25px 0 rgba(0, 0, 0, 0.5);
+}
+.pagination li {
+  display: inline-block;
+  list-style: none;
+}
+.pagination li a {
+  display: block;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  background-color: #fff;
+  text-align: center;
+  text-decoration: none;
+  color: #252525;
+  border-radius: 4px;
+  margin: 5px;
+  box-shadow: inset 0 5px 10px rgba(0, 0, 0, 0.1), 0 2px 5px rgba(0, 0, 0, 0.5);
+  transition: all 0.3s ease;
+}
+.pagination li a:hover, .pagination li a.active {
+  color: #fff;
+  background-color: #f7953c;
+}
+.pagination li a:first-child a {
+  border-radius: 40px 0 0 40px;
+}
+.pagination li a:last-child a {
+  border-radius: 0 40px 40px 0;
 }/*# sourceMappingURL=style.css.map */
