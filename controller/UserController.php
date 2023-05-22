@@ -6,24 +6,23 @@ class UserController extends Controller
     {
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $username = $_POST['username'];
-            $password = $_POST['password'];
+            $password = $_POST['password'];''
+            $mail = $_POST['email'];
 
             $userModel = new UserModel();
-            $user = $userModel->getUserByUsername($username);
 
-            if ($user && password_verify($password, $user->getPassword())) {
-                // Authentification réussie
-                // Effectuer des actions nécessaires, par exemple :
-                // - Créer une session utilisateur
-                // - Rediriger l'utilisateur vers une page sécurisée
-                global $router;
-                header('Location: ' . $router->generate('home'));
-                exit();
-            } else {
-                // Authentification échouée
-                // Afficher un message d'erreur à l'utilisateur
-                echo "Identifiant ou mot de passe incorrect";
-            }
+            $userData = new User([
+            'username'=> $username,    
+            'password'=> $password,    
+            'mail'=> $mail,    
+            ]);
+
+            $user = $userModel->register($userData);
+
+            global $router;
+            header('Location:'.$router->generate('home'));
+           exit();
+           
         } else {
             global $router;
             $link = $router->generate('baseUser');
