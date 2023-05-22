@@ -683,7 +683,7 @@ button {
     min-width: 3em;
     background-color: transparent;
     border: solid 2px $secondary;
-    color:$primary;
+    color: $primary;
     border-radius: 4px;
     text-align: center;
     left: 50%;
@@ -701,7 +701,7 @@ button {
     &.return {
         line-height: 3em;
         color: $primary;
-        border-color:$secondary ;
+        border-color: $secondary ;
         text-shadow: none;
 
         &:hover {
@@ -732,53 +732,122 @@ button {
 // *****************************END RECOMMANDATIONS ***********************
 
 // ***************************SLIDE SHOW NUMBERS **************************
+.slide-show {
+    width: 100%;
+    height: 100px;
 
-.pagination{
-  position: absolute;
-  left: 50%;
-  transform: translate(-50%,-50%);
-  margin: 0;
-  padding: 10px;
-  background-color: #fff;
-  border-radius: 40px;
-  box-shadow: 0 5px 25px 0 rgba(0,0,0,.5);
+    .pagination {
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        margin-top: 60px;
+        padding: 10px;
+        background-color: #fff;
+        border-radius: 40px;
+        box-shadow: 0 5px 25px 0 rgba(0, 0, 0, .5);
 
-  li{
-    display: inline-block;
-    list-style: none;
+        li {
+            display: inline-block;
+            list-style: none;
 
-    a{
-      display: block;
-      width: 40px;
-      height: 40px;
-      line-height: 40px;
-      background-color: #fff;
-      text-align: center;
-      text-decoration: none;
-      color: #252525;
-      border-radius: 4px;
-      margin: 5px;
-      box-shadow: inset 0 5px 10px rgba(0,0,0,.1), 0 2px 5px rgba(0,0,0,.5);
-      transition: all .3s ease;
+            a {
+                display: block;
+                width: 40px;
+                height: 40px;
+                line-height: 40px;
+                font-family: $font1;
+                background-color: #fff;
+                text-align: center;
+                text-decoration: none;
+                color: #252525;
+                border-radius: 4px;
+                margin: 5px;
+                box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+                transition: all .3s ease;
 
-      &:hover,
-      &.active{
-        color: #fff;
+                &:hover {
+                    color: #fff;
+                    background-color: $primary;
+                }
+
+                &:first-child a {
+                    border-radius: 40px 0 0 40px;
+                }
+
+                &:last-child a {
+                    border-radius: 0 40px 40px 0;
+                }
+
+            }
+        }
+
+    }
+
+}
+
+// ****************************END PAGINATION NUMBERS ************************
+
+// *****************************SECTION CONTACT ******************************
+
+.contact {
+    width: 100%;
+    height: auto;
+
+    .ask-questions {
+        width: 100%;
+        height: 300px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
         background-color: $primary;
-      }
-    &:first-child
-      a{
-        border-radius: 40px 0 0 40px;
-    }
-    &:last-child
-      a{
-        border-radius: 0 40px 40px 0;
-    }
-    
-    }
-    }
-    
-    }
+        margin-top: 60px;
 
 
+        .needs {
+            font-size: 2rem;
+            color: white;
+            font-family: $font1;
+            text-align: center;
+            padding-top: 50px;
+
+        }
+
+        #btn-contact-us {
+            width: 120px;
+            height: 35px;
+            margin-top: 40px;
+            font-family: $font1;
+            text-transform: uppercase;
+            background-color: white;
+            border: 0.1em solid $secondary;
+            text-shadow: 0 0.04em 0.04em rgba(0, 0, 0, 0.35);
+            color: #000;
+            text-align: center;
+            border-radius: 20px;
+            transition: all 0.2s;
+
+
+            &:hover {
+                text-shadow: 0 0 2em rgba(255, 255, 255, 1);
+                color: black;
+                border-color: $primary;
+            }
+
+
+        }
+
+    }
+}
+
+// *****************************END SECTION CONTACT****************************
+
+// **********************************FOOTER***********************************
+
+.footer-contain{
+    width: 100%;
+    height: 150px;
+    background-color: #000;
+    display: flex;
+}
 

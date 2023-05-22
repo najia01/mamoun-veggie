@@ -590,41 +590,94 @@ button {
   background: #989eac;
 }
 
-.pagination {
+.slide-show {
+  width: 100%;
+  height: 100px;
+}
+.slide-show .pagination {
   position: absolute;
   left: 50%;
   transform: translate(-50%, -50%);
-  margin: 0;
+  margin-top: 60px;
   padding: 10px;
   background-color: #fff;
   border-radius: 40px;
   box-shadow: 0 5px 25px 0 rgba(0, 0, 0, 0.5);
 }
-.pagination li {
+.slide-show .pagination li {
   display: inline-block;
   list-style: none;
 }
-.pagination li a {
+.slide-show .pagination li a {
   display: block;
   width: 40px;
   height: 40px;
   line-height: 40px;
+  font-family: "OpenSans-Bold", sans-serif;
   background-color: #fff;
   text-align: center;
   text-decoration: none;
   color: #252525;
   border-radius: 4px;
   margin: 5px;
-  box-shadow: inset 0 5px 10px rgba(0, 0, 0, 0.1), 0 2px 5px rgba(0, 0, 0, 0.5);
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
   transition: all 0.3s ease;
 }
-.pagination li a:hover, .pagination li a.active {
+.slide-show .pagination li a:hover {
   color: #fff;
   background-color: #f7953c;
 }
-.pagination li a:first-child a {
+.slide-show .pagination li a:first-child a {
   border-radius: 40px 0 0 40px;
 }
-.pagination li a:last-child a {
+.slide-show .pagination li a:last-child a {
   border-radius: 0 40px 40px 0;
+}
+
+.contact {
+  width: 100%;
+  height: auto;
+}
+.contact .ask-questions {
+  width: 100%;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #f7953c;
+  margin-top: 60px;
+}
+.contact .ask-questions .needs {
+  font-size: 2rem;
+  color: white;
+  font-family: "OpenSans-Bold", sans-serif;
+  text-align: center;
+  padding-top: 50px;
+}
+.contact .ask-questions #btn-contact-us {
+  width: 120px;
+  height: 35px;
+  margin-top: 40px;
+  font-family: "OpenSans-Bold", sans-serif;
+  text-transform: uppercase;
+  background-color: white;
+  border: 0.1em solid #b54f2c;
+  text-shadow: 0 0.04em 0.04em rgba(0, 0, 0, 0.35);
+  color: #000;
+  text-align: center;
+  border-radius: 20px;
+  transition: all 0.2s;
+}
+.contact .ask-questions #btn-contact-us:hover {
+  text-shadow: 0 0 2em rgb(255, 255, 255);
+  color: black;
+  border-color: #f7953c;
+}
+
+.footer-contain {
+  width: 100%;
+  height: 150px;
+  background-color: #000;
+  display: flex;
 }/*# sourceMappingURL=style.css.map */
