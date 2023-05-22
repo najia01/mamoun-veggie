@@ -1,21 +1,31 @@
+{% set style = '/projets/mamoun-veggie/asset/' %}
+{% set image = '/projets/mamoun-veggie/img/' %}
+
 
 
 <footer>
 <div class="footer-contain">
 <div class="logo-m">
-<img src="../img/logo.png" alt="logo Mamoun Veggie" class="foot-logo">
+<img src="{{ ('./img/logo.png') }}"  alt="logo Mamoun Veggie" class="foot-logo">
 </div>
-<a href="../doc/Model__CGU__.docx"></a>
-<a href="../doc/Politique-de-confidentialité.docx"></a>
+
+<div class="links">
+<a href="{{ ('./doc/Model__CGU__.docx') }}">CGU</a>
+<a href="{{ ('./doc/Politique-de-confidentialité.docx') }}">Politique de confidentialité</a>
+</div>
 
 <div class="social-media">
-<a href="https://fr-fr.facebook.com/"><img class="social" src="../img/facebook.png"></a>
-<a href="https://twitter.com/"><img class="social" src="../img/twitter.png"></a>
-<a href="https://www.instagram.com/"><img class="social" src="../img/instagram.png"></a>
-<a href="https://www.pinterest.fr/"><img class="social" src="../img/pinterest.png"></a>
+<a href="https://fr-fr.facebook.com/"><img class="social" src="{{ ('./img/facebook.png') }}"></a>
+<a href="https://twitter.com/"><img class="social" src="{{ ('./img/twitter.png') }}"></a>
+<a href="https://www.instagram.com/"><img class="social" src="{{ ('./img/instagram.png') }}"></a>
+<a href="https://www.pinterest.fr/"><img class="social" src="{{ ('./img/pinterest.png') }}"></a>
 
 </div>
 
-
 </div>
+<div class="copyright">
+        <p id="copy">Copyright&copy;2023 Mamoun Veggie</p>
+</div>
+
+
 </footer>
