@@ -1,0 +1,32 @@
+{% extends "template.html.twig" %}
+
+{% set style = '/projets/mamoun-veggie/asset/' %}
+
+{% block stylesheets %}
+	<link href="{{ style }}dashboard.css" rel="stylesheet">
+{% endblock %}
+
+{% block content %}
+
+
+<section class="dashboard-user">
+
+	<h2>Bienvenue,{{ username }} !</h2>
+	
+	<nav>
+		<ul>
+			<li><a href="#">Accueil</a></li>
+			<li><a href="#">Mes Recettes</a></li>
+			<li><a href="#">Favoris</a></li>
+			<li><a href="#">Paramètres</a></li>
+		</ul>
+
+		<button type="submit" id="btn-deconnect">Déconnexion</button>
+		
+	</nav>
+
+</section>
+
+
+
+{% endblock %}

@@ -9,15 +9,15 @@ $router->setBasePath('/projets/mamoun-veggie');
 $router->map( 'GET', '/','RecipeController#homePage','home');
 $router->map( 'GET', '/recipes/','','baseRecipe');
 $router->map( 'GET', '/recipes/[i:id]','RecipeController#getOne','getOneRecipe');
-$router->map( 'GET', '/connexion','UserController#userLogin','baseUser');
-$router->map('GET|POST', '/connexion', 'UserController#userLogin', 'userLogin');
 
-
+$router->map( 'GET|POST', '/login','UserController#userLogin','login');
+$router->map('POST', '/login', 'UserController#createUser', 'register');
+// $router->map( 'GET', '/dashboard','DashboardController#dashboard','dashboard');
 
 
 
 $match = $router->match();
-
+// var_dump($match);
 
 if(is_array($match)){
     list($controller, $action) = explode ('#', $match['target']);

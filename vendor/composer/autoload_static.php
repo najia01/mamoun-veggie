@@ -43,9 +43,9 @@ class ComposerStaticInite2fbfab5839d9dde078e371a1c3a4943
         'Category' => __DIR__ . '/../..' . '/class/Category.php',
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
         'Controller' => __DIR__ . '/../..' . '/controller/Controller.php',
+        'DashboardController' => __DIR__ . '/../..' . '/controller/DashboardController.php',
         'Favorites' => __DIR__ . '/../..' . '/class/Favorites.php',
         'Ingredient' => __DIR__ . '/../..' . '/class/Ingredient.php',
-        'IngredientController' => __DIR__ . '/../..' . '/controller/IngredientController.php',
         'IngredientModel' => __DIR__ . '/../..' . '/model/IngredientModel.php',
         'Model' => __DIR__ . '/../..' . '/model/Model.php',
         'Recipe' => __DIR__ . '/../..' . '/class/Recipe.php',
@@ -53,6 +53,7 @@ class ComposerStaticInite2fbfab5839d9dde078e371a1c3a4943
         'RecipeModel' => __DIR__ . '/../..' . '/model/RecipeModel.php',
         'User' => __DIR__ . '/../..' . '/class/User.php',
         'UserController' => __DIR__ . '/../..' . '/controller/UserController.php',
+        'UserDashboard' => __DIR__ . '/../..' . '/class/UserDashboard.php',
         'UserModel' => __DIR__ . '/../..' . '/model/UserModel.php',
     );
 

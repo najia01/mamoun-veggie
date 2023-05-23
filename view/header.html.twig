@@ -1,20 +1,34 @@
-        
 <header>
 
-  <nav class="nav-header">
-      <div class="logo">
-      <a href="#"><img class="img-logo" src="{{ ('img/logo.png') }}" alt="Logo"></a>
-      <span>Mamoun Veggie, le plaisir<br> de la cuisine végétarienne</span>
-    </div>
-    <ul class="menu">
-      <li><a href="./template.html.twig">Accueil</a></li>
-      <li><a href="#">A Propos</a></li>
-      <li><a href="#">Mes coups de coeur</a></li>
-      <li><a href="{{ linkConnexion }}" class="connexion-btn">
-      <button id="user-connect" type="submit"> Connexion</button></a></li>
-    </ul>
-  </nav>
+	<nav class="nav-header">
+		<div class="logo">
+			<a href="#"><img class="img-logo" src="{{ ('img/logo.png') }}" alt="Logo"></a>
+			<span>Mamoun Veggie, le plaisir<br>
+				de la cuisine végétarienne</span>
+		</div>
+		<ul class="menu">
+			<li>
+				<a href="./template.html.twig">Accueil</a>
+			</li>
+			<li>
+				<a href="#">A Propos</a>
+			</li>
+			<li>
+				<a href="#">Mes coups de coeur</a>
+			</li>
+			<li>
+				<a href="{{ linkConnexion }}" class="connexion-btn">
+
+					<button id="user-connect" type="submit" name="connexion">
+						Connexion</button>
+				</a>
+
+				<button id="user-deconnect" type="submit" name="logout">Déconnexion
+        </button>
+		
+		
+	</li>
+</ul>
+</nav>
 
 </header>
-
-<h1 class="hr"> RECETTES </h1>

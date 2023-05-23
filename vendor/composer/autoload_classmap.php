@@ -10,9 +10,9 @@ return array(
     'Category' => $baseDir . '/class/Category.php',
     'Composer\\InstalledVersions' => $vendorDir . '/composer/InstalledVersions.php',
     'Controller' => $baseDir . '/controller/Controller.php',
+    'DashboardController' => $baseDir . '/controller/DashboardController.php',
     'Favorites' => $baseDir . '/class/Favorites.php',
     'Ingredient' => $baseDir . '/class/Ingredient.php',
-    'IngredientController' => $baseDir . '/controller/IngredientController.php',
     'IngredientModel' => $baseDir . '/model/IngredientModel.php',
     'Model' => $baseDir . '/model/Model.php',
     'Recipe' => $baseDir . '/class/Recipe.php',
@@ -20,5 +20,6 @@ return array(
     'RecipeModel' => $baseDir . '/model/RecipeModel.php',
     'User' => $baseDir . '/class/User.php',
     'UserController' => $baseDir . '/controller/UserController.php',
+    'UserDashboard' => $baseDir . '/class/UserDashboard.php',
     'UserModel' => $baseDir . '/model/UserModel.php',
 );

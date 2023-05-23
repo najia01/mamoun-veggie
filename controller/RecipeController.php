@@ -8,7 +8,7 @@ class RecipeController extends Controller
         $model = new RecipeModel();
         $datas = $model->getRecipe();
         $link = $router->generate('baseRecipe');
-        $linkConnexion = $router->generate('baseUser');
+        $linkConnexion = $router->generate('login');
         echo self::getTwig()->render('homePage.html.twig',['recipes' => $datas,'linkConnexion'=>$linkConnexion,'link'=>$link]);
     }
 

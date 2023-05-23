@@ -16,6 +16,7 @@ abstract class Controller
         self::$twig = new \Twig\Environment(self::getLoader(), [
             'cache' => false
         ]);
+        // self::$twig->addGlobal('session', $_SESSION);
     }
 
     protected static function getLoader()

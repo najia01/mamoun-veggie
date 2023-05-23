@@ -79,8 +79,6 @@ class User
     public function setUser_Id($user_Id)
     {
         $this->user_Id = $user_Id;
-
-        return $this;
     }
 
     /**
@@ -91,8 +89,6 @@ class User
     public function setUsername($username)
     {
         $this->username = $username;
-
-        return $this;
     }
 
     /**
@@ -103,8 +99,6 @@ class User
     public function setMail($mail)
     {
         $this->mail = $mail;
-
-        return $this;
     }
 
     /**
@@ -115,8 +109,6 @@ class User
     public function setPassword($password)
     {
         $this->password = $password;
-
-        return $this;
     }
 
     /**
@@ -127,7 +119,5 @@ class User
     public function setDate_of_birth($date_Of_Birth)
     {
         $this->date_Of_Birth = $date_Of_Birth;
-
-        return $this;
     }
 }

@@ -86,14 +86,33 @@ header {
                 }
             }
 
-            #user-connect {
+            #user-connect  {
                 width: 120px;
                 height: 30px;
                 border: none;
                 border-radius: 20px;
                 font-family: $font1;
                 text-decoration: none;
-                font-size: 1.1rem;
+                font-size: 1rem;
+                color: black;
+                cursor: pointer;
+                background-color: $new;
+
+
+                &:hover {
+                    opacity: 50%;
+                    color: $secondary;
+
+                }
+            }
+            #user-deconnect{
+                width: 120px;
+                height: 30px;
+                border: none;
+                border-radius: 20px;
+                font-family: $font1;
+                text-decoration: none;
+                font-size: 1rem;
                 color: black;
                 cursor: pointer;
                 background-color: $new;
@@ -902,14 +921,15 @@ button {
             }
         }
     }
-    
+
 }
+
 .copyright {
-        width: 100%;
-        height: 20px;
-        font-size: .8rem;
-        font-family: $font1;
-        color: white;
-        background-color: #252525;
-        text-align: center;
-    }
+    width: 100%;
+    height: 20px;
+    font-size: .8rem;
+    font-family: $font1;
+    color: white;
+    background-color: #252525;
+    text-align: center;
+}
