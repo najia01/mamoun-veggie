@@ -8,7 +8,8 @@
 
 body {
   font-family: "Open Sans", Helvetica, Arial, sans-serif;
-  background: #ededed;
+  background: rgb(0, 0, 0);
+  background: linear-gradient(180deg, rgb(0, 0, 0) 0%, rgba(247, 188, 60, 0.6278886555) 31%, rgb(45, 45, 45) 83%, rgb(115, 115, 115) 94%, rgb(11, 11, 11) 100%);
 }
 
 a {
@@ -23,38 +24,86 @@ a {
   font-family: "OpenSans-Regular";
   src: url(../fonts/OpenSans-Regular.ttf);
 }
-.dashboard-user button-styles {
-  display: inline-block;
-  padding: 10px 20px;
-  background-color: #ff0000;
-  color: #fff;
-  border-radius: 5px;
+.dashboard-user {
+  width: 100%;
+  height: auto;
+}
+.dashboard-user .title-dash {
+  width: 100%;
+  height: 30px;
+  color: white;
+  font-size: 2.1rem;
+  font-family: "OpenSans-Bold", sans-serif;
+  text-align: center;
+}
+.dashboard-user .sidebar {
+  width: 25%;
+  height: 100vh;
+  margin-top: 50px;
+  background: rgb(0, 0, 0);
+  background: linear-gradient(180deg, rgb(0, 0, 0) 0%, rgb(247, 149, 60) 31%, rgb(45, 45, 45) 83%, rgb(115, 115, 115) 94%, rgb(11, 11, 11) 100%);
+  font-size: 0.65em;
+  border-color: transparent;
+}
+.dashboard-user .nav {
+  position: relative;
+  margin: 0 15%;
+  text-align: right;
+  top: 50%;
+  transform: translateY(-50%);
+  font-weight: bold;
+}
+.dashboard-user .nav ul {
+  list-style: none;
+}
+.dashboard-user .nav ul li {
+  position: relative;
+  margin: 3.2em 0;
+}
+.dashboard-user .nav ul li a {
+  font-size: 0.8rem;
+  line-height: 5em;
+  text-transform: uppercase;
   text-decoration: none;
-  transition: background-color 0.3s ease;
+  letter-spacing: 0.4em;
+  color: #FFF;
+  display: block;
+  transition: all ease-out 300ms;
 }
-.dashboard-user button-styles:hover {
-  background-color: #00ff00;
+.dashboard-user .nav ul li.active a {
+  color: white;
 }
-.dashboard-user body {
-  font-family: "OpenSans-Regular", sans-serif;
+.dashboard-user .nav ul li:not(.active)::after {
+  opacity: 0.2;
 }
-.dashboard-user h1, .dashboard-user h2, .dashboard-user p {
-  margin: 0;
-  padding: 0;
+.dashboard-user .nav ul li:not(.active):hover a {
+  color: #b54f2c;
 }
-.dashboard-user nav ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  justify-content: center;
-  background-color: #e0e0e0;
+.dashboard-user .nav ul li::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 0.2em;
+  background: black;
+  left: 0;
+  bottom: 0;
+  background: rgb(0, 0, 0);
+  background: linear-gradient(180deg, rgb(0, 0, 0) 0%, rgb(247, 149, 60) 31%, rgb(45, 45, 45) 83%, rgb(115, 115, 115) 94%, rgb(11, 11, 11) 100%);
 }
-.dashboard-user nav ul li {
-  margin: 0 10px;
-}
-.dashboard-user nav ul li a {
+.dashboard-user #user-deconnect {
+  width: 120px;
+  height: 30px;
+  border: none;
+  border-radius: 20px;
+  font-family: "OpenSans-Bold", sans-serif;
   text-decoration: none;
-  color: #333;
-  padding: 10px;
+  font-size: 1rem;
+  color: white;
+  cursor: pointer;
+  background: rgb(0, 0, 0);
+  background: linear-gradient(180deg, rgb(0, 0, 0) 0%, rgb(247, 149, 60) 31%, rgb(45, 45, 45) 83%, rgb(115, 115, 115) 94%, rgb(11, 11, 11) 100%);
+}
+.dashboard-user #user-deconnect:hover {
+  opacity: 50%;
+  color: white;
 }/*# sourceMappingURL=dashboard.css.map */

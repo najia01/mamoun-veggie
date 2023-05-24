@@ -1,4 +1,4 @@
-{% extends "template.html.twig" %}
+{# {% extends "template.html.twig" %} #}
 
 {% set style = '/projets/mamoun-veggie/asset/' %}
 
@@ -9,24 +9,36 @@
 {% block content %}
 
 
-<section class="dashboard-user">
+	<section class="dashboard-user">
 
-	<h2>Bienvenue,{{ username }} !</h2>
+		<h2 class="title-dash">Bienvenue sur votre espace personnel!</h2>
+			
+
+		<aside class="sidebar">
+			<nav class="nav">
+				<ul>
+					<li class="active">
+						<a href="{{ action }}">Accueil</a>
+					</li>
+					<li>
+						<a href="#">Mes recettes</a>
+					</li>
+					<li>
+						<a href="#">Mes favoris</a>
+					</li>
+					<li>
+						<a href="#">Paramètre</a>
+					</li>
+				</ul>
+				<a href="{{ logout }}">
+					<button id="user-deconnect" type="submit" name="logout">Déconnexion
+					</button>
+				</a>
+
+			</nav>
+		</aside>
+
+	</section>
 	
-	<nav>
-		<ul>
-			<li><a href="#">Accueil</a></li>
-			<li><a href="#">Mes Recettes</a></li>
-			<li><a href="#">Favoris</a></li>
-			<li><a href="#">Paramètres</a></li>
-		</ul>
-
-		<button type="submit" id="btn-deconnect">Déconnexion</button>
-		
-	</nav>
-
-</section>
-
-
 
 {% endblock %}

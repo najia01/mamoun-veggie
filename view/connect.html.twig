@@ -16,11 +16,11 @@
 
 			<h2>Ravi de vous revoir,</h2>
 
-			<form action= "{{ link }}" method="POST">
+			<form action= "{{ login }}" method="POST">
 				<label for="username">
 					<span>PSEUDO</span>
 				</label>
-				<input name="username" type="username"/>
+				<input name="username" type="text"/>
 
 				<label for="password">
 					<span>MOT DE PASSE</span>
@@ -76,7 +76,7 @@
 
 			<div class="form sign-up">
 
-				<form action= "{{ link }}" method="POST">
+				<form action= "{{ path('register') }}" method="POST">
 					<label for="username">
 						<span>Pseudo</span>
 					</label>

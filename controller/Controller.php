@@ -31,6 +31,11 @@ abstract class Controller
     {
         if (self::$twig == null) {
             self::setTwig();
+
+            self::$twig->addFunction(new \Twig\TwigFunction('path', function ($routeName) {
+                global $router;
+                return $router->generate($routeName);
+                }));
         }
         return self::$twig;
     }
