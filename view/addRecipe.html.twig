@@ -1,0 +1,65 @@
+{% extends "template.html.twig" %}
+
+{% set style = '/projets/mamoun-veggie/asset/' %}
+
+{% block stylesheets %}
+	<link href="{{ style }}addrecipe.css" rel="stylesheet">
+{% endblock %}
+
+
+{% block content %}
+
+
+	<section class="addrecipe">
+		<div class="container-recipe">
+
+			<h2 class="title-add">Ajout de recette</h2>
+            
+			<form action="#" method="POST">
+
+				{# <div class="image-recipe">
+					
+				</div> #}
+
+
+				<div class="title-recipe">
+					<label for="title">Titre de la recette
+					</label><br>
+					<input type="text" id="title" name="title">
+				</div>
+
+                 <div class="recipe-resume">
+                 <textarea name="resume" id="resume"></textarea>
+				</div>
+
+                <div class="recipe-ingredient">
+					<label for="ingredient">Ingrédients</label><br>
+					<textarea name="ingredient" id="ingredient"></textarea>
+				</div>
+
+				<div class="recipe-description">
+					<label for="description">Préparation</label><br>
+					<textarea name="description" id="description"></textarea>
+				</div>
+
+
+				<div class="recipe-author">
+					<label for="author">Auteur</label><br>
+					<input type="number" id="author" name="author">
+				</div>
+
+				<div class="btn-send">
+					<input type="reset" name="reset" value="Reset">
+					<input type="submit" name="submit" value="Submit">
+				</div>
+
+			</form>
+
+
+		</div>
+
+
+	</section>
+
+
+{% endblock %}

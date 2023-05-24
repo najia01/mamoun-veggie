@@ -47,7 +47,6 @@ $font1: 'OpenSans-Bold', sans-serif;
     }
 
     .sidebar {
-
         width: 25%;
         height: 100vh;
         margin-top: 50px;
@@ -57,7 +56,7 @@ $font1: 'OpenSans-Bold', sans-serif;
         border-color:transparent;
     }
 
-    .nav {
+    .navbar {
         position: relative;
         margin: 0 15%;
         text-align: right;
@@ -66,7 +65,7 @@ $font1: 'OpenSans-Bold', sans-serif;
         font-weight: bold;
     }
 
-    .nav ul {
+    .navbar ul {
         list-style: none;
 
         li {
@@ -77,25 +76,17 @@ $font1: 'OpenSans-Bold', sans-serif;
                 font-size: .8rem;
                 line-height: 5em;
                 text-transform: uppercase;
-                text-decoration: none;
                 letter-spacing: 0.4em;
                 color: #FFF;
                 display: block;
                 transition: all ease-out 300ms;
-            }
 
-            &.active a {
-                color: white;
+                &:hover{
+                    opacity: 60%;
+                    color: $secondary;
+                }
             }
-
-            &:not(.active)::after {
-                opacity: 0.2;
-            }
-
-            &:not(.active):hover a {
-                color: $secondary;
-            }
-
+           
             &::after {
                 content: '';
                 position: absolute;
@@ -123,14 +114,11 @@ $font1: 'OpenSans-Bold', sans-serif;
         background: rgb(0, 0, 0);
         background: linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(247, 149, 60, 1) 31%, rgba(45, 45, 45, 1) 83%, rgba(115, 115, 115, 1) 94%, rgba(11, 11, 11, 1) 100%);
 
-
         &:hover {
             opacity: 50%;
             color: white;
 
         }
     }
-
-
 
 }
