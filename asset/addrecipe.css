@@ -1,0 +1,25 @@
+.addrecipe .container-recipe {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f2f2f2;
+  border-radius: 5px;
+  display: grid;
+  grid-gap: 20px;
+  align-items: start;
+}
+.addrecipe .container-recipe .title-add {
+  font-size: 24px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.addrecipe .container-recipe form {
+  display: grid;
+  grid-gap: 20px;
+}
+.addrecipe .container-recipe form .title-recipe {
+  grid-row: span 2;
+}
+.addrecipe .container-recipe form .recipe-description .btn-send {
+  grid-column: span 2;
+}/*# sourceMappingURL=addrecipe.css.map */

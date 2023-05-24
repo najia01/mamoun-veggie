@@ -19,14 +19,7 @@ class UserModel extends Model
         $mail = $user->getMail();
     
         $req = $this->getDb()->prepare('INSERT INTO `user` ( `password`, `username`, `mail`) VALUES (:password, :username, :mail)');
-        $req->bindValue(":password", $password, PDO::PARAM_STR);
-        $req->bindValue(":username", $username, PDO::PARAM_STR);
-        $req->bindValue(":mail", $mail, PDO::PARAM_STR);
-    
-        $req->execute();
-    
-        $req->closeCursor();
-    
+       
         }
     
 }

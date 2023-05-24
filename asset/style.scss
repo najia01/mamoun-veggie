@@ -105,25 +105,7 @@ header {
 
                 }
             }
-            // #user-deconnect{
-            //     width: 120px;
-            //     height: 30px;
-            //     border: none;
-            //     border-radius: 20px;
-            //     font-family: $font1;
-            //     text-decoration: none;
-            //     font-size: 1rem;
-            //     color: black;
-            //     cursor: pointer;
-            //     background-color: $new;
-
-
-            //     &:hover {
-            //         opacity: 50%;
-            //         color: $secondary;
-
-            //     }
-            // }
+           
         }
     }
 
@@ -247,7 +229,6 @@ header {
 
 
     &>li>div dl {
-        // width: 120px;
         float: left;
         padding: 30px 10px;
         margin: 30px;
@@ -427,7 +408,6 @@ button {
 
     .last-recipe {
 
-        // width: calc(33.33% - 20px);
         margin-bottom: 40px;
 
 
@@ -493,9 +473,7 @@ button {
                         fill: pink;
                         stroke: pink;
                         text-align: center;
-                        // stroke-width: 2;
-                        // margin-right: 0.5em;
-                        // transition: stroke 250ms ease-in-out;
+                       
                     }
 
                     &:hover .favorite {
@@ -629,7 +607,6 @@ button {
 
         }
 
-
     }
 
     .back {
@@ -652,7 +629,6 @@ button {
             flex-direction: column;
 
         }
-
 
         &:not(:first-of-type):before {
             content: '';

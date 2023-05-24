@@ -15,7 +15,7 @@
 
 			<h2 class="title-add">Ajout de recette</h2>
             
-			<form action="#" method="POST">
+			<form action="{{ path('addedrecipe') }}" method="POST">
 
 				{# <div class="image-recipe">
 					
@@ -45,7 +45,7 @@
 
 				<div class="recipe-author">
 					<label for="author">Auteur</label><br>
-					<input type="number" id="author" name="author">
+					<input type="number" id="author" name="username">
 				</div>
 
 				<div class="btn-send">
