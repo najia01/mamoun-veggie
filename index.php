@@ -18,12 +18,12 @@ $router->map('GET', '/logout', 'UserController#logout', 'logout');
 
 $router->map( 'GET', '/dashboard','UserController#userLogin','dashboard');
 
-$router->map( 'POST', '/addedrecipe','RecipeController#added','addedrecipe');
+$router->map( 'GET|POST', '/addedrecipe','RecipeController#added','addedrecipe');
 
 
 
 $match = $router->match();
-var_dump($match);
+// var_dump($match);
 
 if(is_array($match)){
     list($controller, $action) = explode ('#', $match['target']);

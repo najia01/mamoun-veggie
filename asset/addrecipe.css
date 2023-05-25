@@ -1,3 +1,32 @@
+*,
+:before,
+:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.row-limit-size {
+  max-width: 1300px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+body {
+  background-image: url("../img/addrecipe.jpg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: auto;
+}
+
+@font-face {
+  font-family: "OpenSans-bold";
+  src: url(../fonts/OpenSans-Bold.ttf);
+}
+@font-face {
+  font-family: "OpenSans-Regular";
+  src: url(../fonts/OpenSans-Regular.ttf);
+}
 .addrecipe .container-recipe {
   max-width: 600px;
   margin: 0 auto;
@@ -10,6 +39,7 @@
 }
 .addrecipe .container-recipe .title-add {
   font-size: 24px;
+  text-transform: uppercase;
   text-align: center;
   margin-bottom: 20px;
 }

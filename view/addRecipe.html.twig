@@ -7,55 +7,50 @@
 {% endblock %}
 
 
-{% block content %}
 
+{% block content %}
+ 
 
 	<section class="addrecipe">
 		<div class="container-recipe">
+			
+				<h2 class="title-add">Ajout de recette</h2>
 
-			<h2 class="title-add">Ajout de recette</h2>
-            
-			<form action="{{ path('addedrecipe') }}" method="POST">
+				<form action="{{ path('addedrecipe') }}" method="POST">
 
-				{# <div class="image-recipe">
-					
-				</div> #}
+					<div class="title-recipe">
+						<label for="title">Titre de la recette</label>
+						<input type="text" id="title" name="title">
+					</div>
 
+					<div class="recipe-resume">
+						<textarea name="resume" id="resume"></textarea>
+					</div>
 
-				<div class="title-recipe">
-					<label for="title">Titre de la recette
-					</label><br>
-					<input type="text" id="title" name="title">
-				</div>
+					<div class="recipe-ingredient">
+						<label for="ingredient">Ingrédients</label><br>
+						<textarea name="ingredient" id="ingredient"></textarea>
+					</div>
 
-                 <div class="recipe-resume">
-                 <textarea name="resume" id="resume"></textarea>
-				</div>
-
-                <div class="recipe-ingredient">
-					<label for="ingredient">Ingrédients</label><br>
-					<textarea name="ingredient" id="ingredient"></textarea>
-				</div>
-
-				<div class="recipe-description">
-					<label for="description">Préparation</label><br>
-					<textarea name="description" id="description"></textarea>
-				</div>
+					<div class="recipe-description">
+						<label for="description">Préparation</label><br>
+						<textarea name="description" id="description"></textarea>
+					</div>
 
 
-				<div class="recipe-author">
-					<label for="author">Auteur</label><br>
-					<input type="number" id="author" name="username">
-				</div>
+					<div class="recipe-author">
+						<label for="author">Auteur</label><br>
+						<input type="number" id="author" name="username">
+					</div>
 
-				<div class="btn-send">
-					<input type="reset" name="reset" value="Reset">
-					<input type="submit" name="submit" value="Submit">
-				</div>
+					<div class="btn-send">
+						<input type="reset" name="reset" value="Reset">
+						<input type="submit" name="submit" value="Submit">
+					</div>
 
-			</form>
+				</form>
 
-
+			
 		</div>
 
 

@@ -1,9 +1,15 @@
 {% set style = '/projets/mamoun-veggie/asset/' %}
 {% set image = '/projets/mamoun-veggie/img/' %}
 
+{% block stylesheets %}
+	<link href="{{ style }}footer.scss" rel="stylesheet">
+{% endblock %}
 
 
+
+{% block content %}
 <footer>
+
 <div class="footer-contain">
 <div class="logo-m">
 <img src="{{ image }}/logo.png"   alt="logo Mamoun Veggie" class="foot-logo">
@@ -29,3 +35,5 @@
 
 
 </footer>
+
+{% endblock %}

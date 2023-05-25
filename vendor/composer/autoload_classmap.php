@@ -10,7 +10,6 @@ return array(
     'Category' => $baseDir . '/class/Category.php',
     'Composer\\InstalledVersions' => $vendorDir . '/composer/InstalledVersions.php',
     'Controller' => $baseDir . '/controller/Controller.php',
-    'DashboardController' => $baseDir . '/controller/DashboardController.php',
     'Favorites' => $baseDir . '/class/Favorites.php',
     'Ingredient' => $baseDir . '/class/Ingredient.php',
     'IngredientModel' => $baseDir . '/model/IngredientModel.php',

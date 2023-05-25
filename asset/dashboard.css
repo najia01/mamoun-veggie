@@ -54,6 +54,7 @@ a {
   font-weight: bold;
 }
 .dashboard-user .navbar ul {
+  width: 250px;
   list-style: none;
 }
 .dashboard-user .navbar ul li {

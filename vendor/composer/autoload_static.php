@@ -43,7 +43,6 @@ class ComposerStaticInite2fbfab5839d9dde078e371a1c3a4943
         'Category' => __DIR__ . '/../..' . '/class/Category.php',
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
         'Controller' => __DIR__ . '/../..' . '/controller/Controller.php',
-        'DashboardController' => __DIR__ . '/../..' . '/controller/DashboardController.php',
         'Favorites' => __DIR__ . '/../..' . '/class/Favorites.php',
         'Ingredient' => __DIR__ . '/../..' . '/class/Ingredient.php',
         'IngredientModel' => __DIR__ . '/../..' . '/model/IngredientModel.php',
