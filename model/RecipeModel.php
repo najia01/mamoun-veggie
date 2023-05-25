@@ -11,8 +11,7 @@ class RecipeModel extends Model{
             $recipes[] = new Recipe($recipe);
         }
         
-        $req->closeCursor();
-         
+                 
         return $recipes;
         
     }
@@ -24,8 +23,7 @@ class RecipeModel extends Model{
 
         $recipe = new Recipe($req->fetch(PDO::FETCH_ASSOC));
                        
-        $req->closeCursor();
-    
+            
         return $recipe;
         
     }
@@ -35,24 +33,24 @@ class RecipeModel extends Model{
         $image = $add->getImage();
         $title = $add->getTitle();
         $description = $add->getDescription();
-        $cookingTime = $add->getCookingTime();
-        $numberOfCovers = $add->getNumberOfCovers();
-        $publicationDate = $add->getPublicationDate();
-        $userId = $add->getUserId();
+        // $cooking_Time = $add->getCooking_Time();
+        // $numberOfCovers = $add->getNumberOfCovers();
+        $publicationDate = $add->getPublication_Date();
+        $userId = $add->getUser_Id();
     
-        $req = $this->getDb()->prepare('INSERT INTO `recipe` (`image`, `title`, `description`, `cooking_time`, `number_of_covers`, `publication_date`, `user_id`) VALUES (:image, :title, :description, :cooking_time, :number_of_covers, :publication_date, :user_id)');
+        $req = $this->getDb()->prepare('INSERT INTO `recipe` (`image`, `title`, `description`, `cooking_time`, `number_of_covers`, `publicationDate`, `userId`) VALUES (:image, :title, :description, :cooking_Time, :number_of_covers, :publicationDate, :userId)');
     
         $req->bindValue(":image", $image, PDO::PARAM_STR);
         $req->bindValue(":title", $title, PDO::PARAM_STR);
         $req->bindValue(":description", $description, PDO::PARAM_STR);
-        $req->bindValue(":cooking_time", $cookingTime, PDO::PARAM_INT);
-        $req->bindValue(":number_of_covers", $numberOfCovers, PDO::PARAM_INT);
-        $req->bindValue(":publication_date", $publicationDate, PDO::PARAM_STR);
-        $req->bindValue(":user_id", $userId, PDO::PARAM_INT);
+        // $req->bindValue(":cooking_time", $cooking_Time, PDO::PARAM_INT);
+        // $req->bindValue(":number_of_covers", $numberOfCovers, PDO::PARAM_INT);
+        $req->bindValue(":publicationDate", $publicationDate, PDO::PARAM_INT);
+        $req->bindValue(":userId", $userId, PDO::PARAM_INT);
     
         $req->execute();
     
-        $req->closeCursor();
+       
     }
     
     

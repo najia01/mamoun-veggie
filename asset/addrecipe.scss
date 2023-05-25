@@ -1,35 +1,34 @@
 *,
 :before,
 :after {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 .row-limit-size {
-    max-width: 1300px;
-    width: 100%;
-    margin: 0 auto;
+  max-width: 1300px;
+  width: 100%;
+  margin: 0 auto;
 }
 
 body {
+
   background-image: url('../img/addrecipe.jpg');
-  background-repeat: no-repeat;
+  background-repeat: unset;
   background-size: contain;
-  
-  height: auto;
 
 }
 
 
 @font-face {
-    font-family: 'OpenSans-bold';
-    src: url(../fonts/OpenSans-Bold.ttf);
+  font-family: 'OpenSans-bold';
+  src: url(../fonts/OpenSans-Bold.ttf);
 }
 
 @font-face {
-    font-family: 'OpenSans-Regular';
-    src: url(../fonts/OpenSans-Regular.ttf);
+  font-family: 'OpenSans-Regular';
+  src: url(../fonts/OpenSans-Regular.ttf);
 }
 
 $primary: #f7953c;
@@ -41,64 +40,142 @@ $font1: 'OpenSans-Bold', sans-serif;
 
 .addrecipe {
   .container-recipe {
-    max-width: 600px;
+    max-width: 800px;
     margin: 0 auto;
     padding: 20px;
-    background-color: #f2f2f2;
-    border-radius: 5px;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(84, 83, 91, 1) 41%, rgba(45, 45, 45, 1) 93%, rgba(115, 115, 115, 1) 96%, rgba(11, 11, 11, 1) 100%);
+    border-radius: 10px;
     display: grid;
     grid-gap: 20px;
-    align-items: start;
+
 
     .title-add {
-      font-size: 24px;
+      font-size: 1.8rem;
+      color: white;
       text-transform: uppercase;
       text-align: center;
-      margin-bottom: 20px;
+      padding: 30px;
     }
 
     form {
       display: grid;
-      grid-gap: 20px;
+      width: 800px;
+      height: 1000px;
+      align-items: center;
+      justify-items: stretch;
+      align-content: space-evenly;
 
+      label {
+        color: white;
+        font-size: 1.2rem;
+        padding: 10px 10px;
+        vertical-align: top;
+      }
 
+      input[type="text"] {
+        width: 300px;
+        height: 30px;
+        font-size: 1rem;
+        background: inherit;
+        border: 2px solid white;
+        border-radius: 10px;
+        background: white;
+        text-align: center;
+      }
+
+      input[type="number"],
+      [type="date"],
+      [type="time"] {
+        width: 150px;
+        height: 30px;
+        font-size: 1rem;
+        text-align: center;
+        border: inherit;
+        border: 2px solid white;
+        border-radius: 10px;
+        background: white;
+      }
+
+      textarea {
+        width: 400px;
+        height: auto;
+        border-radius: 10px;
+      }
 
       .title-recipe {
         grid-row: span 2;
 
-        label {}
 
-        input[type="text"] {}
       }
 
-      .recipe-resume {
-        textarea {}
-      }
+      .btn-send {
+        width: 200px;
+        height: 70px;
 
-      .recipe-ingredient {
-        label {}
 
-        textarea {}
-      }
 
-      .recipe-description {
-        label {}
+        &>.pulse {
+          width: 150px;
+          height: 35px;
+          font-size: 1rem;
+          border-radius: 10px;
+          background: white;
+          border: 2px solid;
+          font: inherit;
+          line-height: 1;
+          margin: 0.5em;
+          cursor: pointer;
 
-        textarea {}
 
-        .recipe-author {
-          label {}
+          &:hover,
+          &:focus {
+            animation: pulse 1s;
+            box-shadow: 0 0 0 2em transparent;
+          }
 
-          input[type="number"] {}
-        }
+          @keyframes pulse {
+            0% {
+              box-shadow: 5px 6px 10px 5px rgba(247, 149, 60, 0.08);
+            }
+          }
 
-        .btn-send {
-          grid-column: span 2;
-
-          input[type="reset"],
-          input[type="submit"] {}
         }
       }
     }
+
+  }
+}
+
+//          *******************FORMULAIRE IMAGE********************
+
+.formImg {
+  width: 600px;
+  height: fit-content;
+
+  &>#btn-sendImg{
+    width: 150px;
+          height: 35px;
+          font-size: 1rem;
+          border-radius: 10px;
+          background: white;
+          border: 2px solid;
+          font: inherit;
+          line-height: 1;
+          margin: 0.5em;
+          cursor: pointer;
+
+
+          &:hover,
+          &:focus {
+            animation: pulse 1s;
+            box-shadow: 0 0 0 2em transparent;
+          }
+
+          @keyframes pulse {
+            0% {
+              box-shadow: 5px 6px 10px 5px rgba(247, 149, 60, 0.08);
+            }
+          }
+
   }
 }

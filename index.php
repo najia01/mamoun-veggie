@@ -19,6 +19,9 @@ $router->map('GET', '/logout', 'UserController#logout', 'logout');
 $router->map( 'GET', '/dashboard','UserController#userLogin','dashboard');
 
 $router->map( 'GET|POST', '/addedrecipe','RecipeController#added','addedrecipe');
+$router->map( 'GET|POST', '/addImg','RecipeController#addImage','addImg');
+
+
 
 
 

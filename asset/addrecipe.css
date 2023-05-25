@@ -14,9 +14,8 @@
 
 body {
   background-image: url("../img/addrecipe.jpg");
-  background-repeat: no-repeat;
+  background-repeat: unset;
   background-size: contain;
-  height: auto;
 }
 
 @font-face {
@@ -28,28 +27,114 @@ body {
   src: url(../fonts/OpenSans-Regular.ttf);
 }
 .addrecipe .container-recipe {
-  max-width: 600px;
+  max-width: 800px;
   margin: 0 auto;
   padding: 20px;
-  background-color: #f2f2f2;
-  border-radius: 5px;
+  background: linear-gradient(180deg, rgb(0, 0, 0) 0%, rgb(84, 83, 91) 41%, rgb(45, 45, 45) 93%, rgb(115, 115, 115) 96%, rgb(11, 11, 11) 100%);
+  border-radius: 10px;
   display: grid;
   grid-gap: 20px;
-  align-items: start;
 }
 .addrecipe .container-recipe .title-add {
-  font-size: 24px;
+  font-size: 1.8rem;
+  color: white;
   text-transform: uppercase;
   text-align: center;
-  margin-bottom: 20px;
+  padding: 30px;
 }
 .addrecipe .container-recipe form {
   display: grid;
-  grid-gap: 20px;
+  width: 800px;
+  height: 1000px;
+  align-items: center;
+  justify-items: stretch;
+  align-content: space-evenly;
+}
+.addrecipe .container-recipe form label {
+  color: white;
+  font-size: 1.2rem;
+  padding: 10px 10px;
+  vertical-align: top;
+}
+.addrecipe .container-recipe form input[type=text] {
+  width: 300px;
+  height: 30px;
+  font-size: 1rem;
+  background: inherit;
+  border: 2px solid white;
+  border-radius: 10px;
+  background: white;
+  text-align: center;
+}
+.addrecipe .container-recipe form input[type=number],
+.addrecipe .container-recipe form [type=date],
+.addrecipe .container-recipe form [type=time] {
+  width: 150px;
+  height: 30px;
+  font-size: 1rem;
+  text-align: center;
+  border: inherit;
+  border: 2px solid white;
+  border-radius: 10px;
+  background: white;
+}
+.addrecipe .container-recipe form textarea {
+  width: 400px;
+  height: auto;
+  border-radius: 10px;
 }
 .addrecipe .container-recipe form .title-recipe {
   grid-row: span 2;
 }
-.addrecipe .container-recipe form .recipe-description .btn-send {
-  grid-column: span 2;
+.addrecipe .container-recipe form .btn-send {
+  width: 200px;
+  height: 70px;
+}
+.addrecipe .container-recipe form .btn-send > .pulse {
+  width: 150px;
+  height: 35px;
+  font-size: 1rem;
+  border-radius: 10px;
+  background: white;
+  border: 2px solid;
+  font: inherit;
+  line-height: 1;
+  margin: 0.5em;
+  cursor: pointer;
+}
+.addrecipe .container-recipe form .btn-send > .pulse:hover, .addrecipe .container-recipe form .btn-send > .pulse:focus {
+  animation: pulse 1s;
+  box-shadow: 0 0 0 2em transparent;
+}
+@keyframes pulse {
+  0% {
+    box-shadow: 5px 6px 10px 5px rgba(247, 149, 60, 0.08);
+  }
+}
+
+.formImg {
+  width: 600px;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+.formImg > #btn-sendImg {
+  width: 150px;
+  height: 35px;
+  font-size: 1rem;
+  border-radius: 10px;
+  background: white;
+  border: 2px solid;
+  font: inherit;
+  line-height: 1;
+  margin: 0.5em;
+  cursor: pointer;
+}
+.formImg > #btn-sendImg:hover, .formImg > #btn-sendImg:focus {
+  animation: pulse 1s;
+  box-shadow: 0 0 0 2em transparent;
+}
+@keyframes pulse {
+  0% {
+    box-shadow: 5px 6px 10px 5px rgba(247, 149, 60, 0.08);
+  }
 }/*# sourceMappingURL=addrecipe.css.map */
