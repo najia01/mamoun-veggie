@@ -12,12 +12,15 @@
 	<section class="dashboard-user">
 
 		<h2 class="title-dash">Bienvenue sur votre espace personnel!</h2>
-			
+
 
 		<aside class="sidebar">
 			<nav class="navbar">
 				<ul>
-					<li >
+					<li>
+						User ID : {{ session.id }}
+					</li>
+					<li>
 						<a href="{{ path('home') }}">Accueil</a>
 					</li>
 					<li>
@@ -42,6 +45,6 @@
 		</aside>
 
 	</section>
-	
+
 
 {% endblock %}

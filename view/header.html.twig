@@ -13,23 +13,31 @@
 			<li>
 				<a href="#">A Propos</a>
 			</li>
-			
+
 			<li>
 				<a href="{{ path('dashboard') }}">Mon compte</a>
 			</li>
 			<li>
-				<a href="{{ linkConnexion }}" class="connexion-btn">
+				User ID : {{ session.id }}
+			</li>
+			<li>
 
-					<button id="user-connect" type="submit" name="connexion">
-						Connexion</button>
-				</a>
+				{% if session.connect %}
+					<a href="{{ path('logout') }}">
+						<button id="user-deconnect" type="submit" name="logout">Déconnexion
+						</button>
+					</a>
+				{% else %}
+					<a href="{{ path('login') }}" class="connexion-btn">
 
-				{# <a href="{{ logout }}"><button id="user-deconnect" type="submit" name="logout">Déconnexion
-        </button></a> #}
-		
-		
-	</li>
-</ul>
-</nav>
+						<button id="user-connect" type="submit" name="connexion">
+							Connexion</button>
+					</a>
+				{% endif %}
+
+
+			</li>
+		</ul>
+	</nav>
 
 </header>

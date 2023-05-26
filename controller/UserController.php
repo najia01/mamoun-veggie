@@ -13,27 +13,26 @@ class UserController extends Controller
 
             $model = new UserModel();
             $user = $model->getUserByUsername($username);
-           
+
             if ($user) {
-            
+
                 if (password_verify($password, $user->getPassword())) {
                     $_SESSION['connect'] = true;
-                    $_SESSION['id'] = $user->getUser_Id();
+                    $_SESSION['id'] = $user->getUser_id();
                     $_SESSION['username'] = $user->getUsername();
 
-                    // header('Location: ./');
-
                     global $router;
-                    $dashboard = $router->generate('dashboard');
-                    echo self::getTwig()->render('dashboardUser.html.twig', ['dashboard' => $dashboard]); 
+                    header('Location:' . $router->generate('dashboard'));
+
+                    // $dashboard = ;
+                    // echo self::getTwig()->render('dashboardUser.html.twig', ['dashboard' => $dashboard]); 
 
                 } else {
                     // Identifiant ou mot de passe incorrect
 
                     global $router;
                     $login = $router->generate('login');
-                    $dashboard = $router->generate('dashboard');
-                    echo self::getTwig()->render('connect.html.twig', ['login' => $login]); 
+                    echo self::getTwig()->render('connect.html.twig', ['login' => $login]);
                 }
             } else {
                 global $router;
@@ -45,7 +44,7 @@ class UserController extends Controller
 
     public function createUser()
     {
-       
+
         if (!$_POST) {
             echo self::getTwig()->render('connect.html.twig', []);
         } else {
@@ -60,7 +59,7 @@ class UserController extends Controller
                 'password' => $password,
                 'mail' => $mail
             ]);
-            
+
 
             $model = new UserModel();
             $result = $model->register($user);
@@ -68,8 +67,6 @@ class UserController extends Controller
             global $router;
             $register = $router->generate('register');
             echo self::getTwig()->render('connect.html.twig', ['register' => $register]);
-
-           
         }
     }
 
@@ -79,5 +76,4 @@ class UserController extends Controller
         header('Location: ./');
         exit();
     }
-
 }

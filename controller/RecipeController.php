@@ -5,16 +5,19 @@ class RecipeController extends Controller
     public function homePage()
     {
         global $router;
+
         $model = new RecipeModel();
         $datas = $model->getRecipe();
+
         $link = $router->generate('baseRecipe');
         $linkConnexion = $router->generate('login');
         $logout = $router->generate('logout');
         $addedrecipe = $router->generate('addedrecipe');
         $addedImage = $router->generate('addImg');
-        echo self::getTwig()->render('homePage.html.twig', ['recipes' => $datas, 'linkConnexion' => $linkConnexion, 'link' => $link, 'logout' => $logout, 'addedrecipe' => $addedrecipe, 'addedImage'=> $addedImage]);
-    }
+        $dashboard = $router->generate('dashboard');
 
+        echo self::getTwig()->render('homePage.html.twig', ['recipes' => $datas, 'linkConnexion' => $linkConnexion, 'link' => $link, 'logout' => $logout, 'addedrecipe' => $addedrecipe, 'addedImage' => $addedImage, 'dashboard' => $dashboard ]);
+    }
 
     public function getOne(int $id)
     {
@@ -28,34 +31,33 @@ class RecipeController extends Controller
 
     public function added()
     {
-
-        if (!$_POST) { // si il n y a pas de post envoyé 
+        global $router;
+        // si il n y a pas de post envoyé 
+        if (!$_POST) {
             echo self::getTwig()->render('addRecipe.html.twig', []); // il execute cette condition 
         } else {
             if (isset($_POST['submit'])) { // sinon il recupere du form toutes les données demandées
-                $userId = $_SESSION['id'];
-                $title = $_POST['title'];
-                // $image = $_POST['image'];
-                $description = $_POST['description'];
-                // $cooking_Time = $_POST['cooking_Time'];
-                $numberOfCovers = $_POST['numberOfCovers'];
-                $publicationDate = $_POST['publicationDate'];
 
-                $recipe = new Recipe([ // on rassemble toutes les données dans un tableau avec création d'une variable 
-                    'userId' => $userId,
+                $title = $_POST['title'];
+                $number_of_covers = $_POST['number_of_covers'];
+                $cooking_time = $_POST['cooking_time'];
+                $description = $_POST['description'];
+                $author = $_SESSION['id'];
+
+                // on rassemble toutes les données dans un tableau avec création d'une variable 
+                $recipe = new Recipe([
                     'title' => $title,
-                    // 'image' => $image,
+                    'number_of_covers' => $number_of_covers,
+                    'cooking_time' => $cooking_time,
                     'description' => $description,
-                    // 'cooking_Time' => $cooking_Time,
-                    'numberOfCovers' => $numberOfCovers,
-                    'publicationDate' => $publicationDate,
+                    'author' => $author,
                 ]);
 
 
                 $recipeModel = new RecipeModel();
                 $recipeModel->addRecipe($recipe);
 
-                global $router;
+
                 header('Location: ' . $router->generate('home'));
             } else {
                 echo 'Votre ajout de recette n a pas été pris en compte ';
@@ -83,7 +85,6 @@ class RecipeController extends Controller
 
                 // Redirige l'utilisateur vers une autre page ou affiche un message de confirmation
                 header('Location: /');
-               
             }
         }
 
@@ -91,4 +92,15 @@ class RecipeController extends Controller
         global $router;
         header('Location: ' . $router->generate('addImg'));
     }
+
+    public function getUserRecipe(){
+        if ($_SESSION['connect'] === true ) {
+            $author = $_SESSION['id'];
+    
+            $model = new RecipeModel();
+            $userRecipes = $model->getUserRecipes($author);
+    
+            echo self::getTwig()->render('dashboardUser.html.twig', ['userRecipes' => $userRecipes]);
+    }
+}
 }
