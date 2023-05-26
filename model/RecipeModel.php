@@ -12,7 +12,7 @@ class RecipeModel extends Model{
             $recipes[] = new Recipe($recipe);
         }
         
-                 
+                
         return $recipes;
         
     }
@@ -36,7 +36,7 @@ class RecipeModel extends Model{
             FROM `recipe`
             INNER JOIN `user`
             ON `recipe`.`username` = `user`.`user_id`
-            WHERE `recipe`.`username` = :id');
+            WHERE `user`.`user_id` = :id');
         $req->bindParam(':id', $author, PDO::PARAM_INT);
         $req->execute();
 
@@ -44,7 +44,7 @@ class RecipeModel extends Model{
             $recipes[] = new Recipe($recipeData);
         }
 
-        $req->closeCursor();
+      
         return $recipes;
     }
 
@@ -60,7 +60,7 @@ class RecipeModel extends Model{
     
         $req->bindParam(":title", $title, PDO::PARAM_STR);
         $req->bindParam(":description", $description, PDO::PARAM_STR);
-        $req->bindParam(":cooking_time", $cooking_time, PDO::PARAM_INT);
+        $req->bindParam(":cooking_time", $cooking_time, PDO::PARAM_STR);
         $req->bindParam(":number_of_covers", $number_of_covers, PDO::PARAM_INT);
         $req->bindParam(":author", $author, PDO::PARAM_INT);
 

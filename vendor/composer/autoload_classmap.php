@@ -11,7 +11,6 @@ return array(
     'Composer\\InstalledVersions' => $vendorDir . '/composer/InstalledVersions.php',
     'Controller' => $baseDir . '/controller/Controller.php',
     'Favorites' => $baseDir . '/class/Favorites.php',
-    'ImageController' => $baseDir . '/controller/ImageController.php',
     'Ingredient' => $baseDir . '/class/Ingredient.php',
     'IngredientModel' => $baseDir . '/model/IngredientModel.php',
     'Model' => $baseDir . '/model/Model.php',

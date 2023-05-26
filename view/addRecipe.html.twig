@@ -11,56 +11,57 @@
 
 
 	<section class="addrecipe">
+		<div class="container-recipe">
 
-		<div class="row-limit-size">
+			<h2 class="title-add">Ajout de recette</h2>
 
-			<div class="container-recipe">
+			<div class="form-image">
 
-				<h2 class="title-add">Ajout de recette</h2>
-
-				<form class="formImg" method="POST" action="{{ path('addImg') }}" enctype="multipart/form-data">
+				<form
+					class="formImg" method="POST" action="{{ path('addImg') }}" enctype="multipart/form-data">
 					{# <label for="image">Image :</label> #}
 					<input type="file" id="image" name="image" accept="image/*" required>
 					<button id="btn-sendImg" type="submit">Ajouter l'image</button>
 				</form>
-
-				<form action="{{ path('addedrecipe') }}" method="POST">
-
-					<div class="title-recipe">
-						<label for="title">Titre de la recette</label>
-						<input type="text" id="title" name="title">
-					</div>
-
-					<div class="recipe-resume">
-						<label for="number_of_covers">Nombre de pers</label>
-						<input type="number" id="nb-covers" name="number_of_covers">
-
-						<label for="cooking_time">Temps</label>
-						<input type="time" id="cookingtime" name="cooking_time">
-
-					</div>
-
-					{# <div class="recipe-ingredient">
-						<label for="ingredient">Ingrédients</label>
-						<textarea name="ingredient" id="ingredient"></textarea>
-					</div> #}
-
-					<div class="recipe-description">
-						<label for="description">Préparation</label>
-						<textarea name="description" id="description"></textarea>
-					</div>
-
-					<div class="btn-send">
-
-						<input class="pulse" type="submit" name="submit" value="Envoyer">
-					</div>
-
-				</form>
-
-
 			</div>
 
+			<form action="{{ path('addedrecipe') }}" method="POST">
+
+				<div class="title-recipe">
+					<label for="title">Titre de la recette</label>
+					<input type="text" id="title" name="title">
+				</div>
+
+				<div class="recipe-resume">
+					<label for="number_of_covers">Nombre de pers</label>
+					<input type="number" id="nb-covers" name="number_of_covers">
+
+					<label for="cooking_time">Temps</label>
+					<input type="time" name="cooking_time" >
+
+				</div>
+
+				{# <div class="recipe-ingredient">
+														<label for="ingredient">Ingrédients</label>
+														<textarea name="ingredient" id="ingredient"></textarea>
+													</div> #}
+
+				<div class="recipe-description">
+					<label for="description">Préparation</label><br>
+					<textarea name="description" id="description"></textarea>
+				</div>
+
+				<div class="btn-send">
+					<input class="pulse" type="submit" name="submit" value="Modifier"
+					<input class="pulse" type="submit" name="submit" value="Envoyer">
+				</div>
+
+			</form>
+
+
 		</div>
+
+
 	</section>
 
 

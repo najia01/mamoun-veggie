@@ -6,7 +6,7 @@ class UserController extends Controller
     public function userLogin()
     {
         if (!$_POST) {
-            echo self::getTwig()->render('connect.html.twig', []);
+            echo self::getRender('connect.html.twig', []);
         } else {
             $username = $_POST['username'];
             $password = $_POST['password'];
@@ -21,23 +21,24 @@ class UserController extends Controller
                     $_SESSION['id'] = $user->getUser_id();
                     $_SESSION['username'] = $user->getUsername();
 
-                    global $router;
-                    header('Location:' . $router->generate('dashboard'));
+                    
+                    // header('Location:' . $router->generate('dashboard'));
 
-                    // $dashboard = ;
-                    // echo self::getTwig()->render('dashboardUser.html.twig', ['dashboard' => $dashboard]); 
+                    global $router;
+                    $dashboard = $router->generate('dashboard');
+                    echo self::getRender('dashboardUser.html.twig', ['dashboard' => $dashboard]); 
 
                 } else {
                     // Identifiant ou mot de passe incorrect
 
                     global $router;
                     $login = $router->generate('login');
-                    echo self::getTwig()->render('connect.html.twig', ['login' => $login]);
+                    echo self::getRender('connect.html.twig', ['login' => $login]);
                 }
             } else {
                 global $router;
                 $login = $router->generate('login');
-                echo self::getTwig()->render('connect.html.twig', ['login' => $login]);
+                echo self::getRender('connect.html.twig', ['login' => $login]);
             }
         }
     }
@@ -46,7 +47,7 @@ class UserController extends Controller
     {
 
         if (!$_POST) {
-            echo self::getTwig()->render('connect.html.twig', []);
+            echo self::getRender('connect.html.twig', []);
         } else {
 
             $username = $_POST['username'];
@@ -66,7 +67,7 @@ class UserController extends Controller
 
             global $router;
             $register = $router->generate('register');
-            echo self::getTwig()->render('connect.html.twig', ['register' => $register]);
+            echo self::getRender('connect.html.twig', ['register' => $register]);
         }
     }
 

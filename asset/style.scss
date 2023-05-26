@@ -86,6 +86,26 @@ header {
                 }
             }
 
+            #user-deconnect  {
+                width: 120px;
+                height: 30px;
+                border: none;
+                border-radius: 20px;
+                font-family: $font1;
+                text-decoration: none;
+                font-size: 1rem;
+                color: black;
+                cursor: pointer;
+                background-color: $new;
+
+
+                &:hover {
+                    opacity: 50%;
+                    color: $secondary;
+
+                }
+            }
+
             #user-connect  {
                 width: 120px;
                 height: 30px;
@@ -838,6 +858,26 @@ button {
 // *****************************END SECTION CONTACT****************************
 
 // **********************************FOOTER***********************************
+
+*,
+:before,
+:after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.row-limit-size {
+    max-width: 1300px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+body {
+    padding: 10px;
+    height: auto;
+
+}
 
 .footer-contain {
     width: 100%;

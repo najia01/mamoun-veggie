@@ -148,34 +148,37 @@ $font1: 'OpenSans-Bold', sans-serif;
 
 //          *******************FORMULAIRE IMAGE********************
 
-.formImg {
+.form-image {
   width: 600px;
-  height: fit-content;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 
-  &>#btn-sendImg{
+  &>form>#btn-sendImg {
     width: 150px;
-          height: 35px;
-          font-size: 1rem;
-          border-radius: 10px;
-          background: white;
-          border: 2px solid;
-          font: inherit;
-          line-height: 1;
-          margin: 0.5em;
-          cursor: pointer;
+    height: 35px;
+    font-size: 1rem;
+    border-radius: 10px;
+    background: white;
+    border: 2px solid black;
+    font: inherit;
+    line-height: 1;
+    margin: 0.5em;
+    cursor: pointer;
 
 
-          &:hover,
-          &:focus {
-            animation: pulse 1s;
-            box-shadow: 0 0 0 2em transparent;
-          }
+    &:hover,
+    &:focus {
+      animation: pulse 1s;
+      box-shadow: 0 0 0 2em transparent;
+    }
 
-          @keyframes pulse {
-            0% {
-              box-shadow: 5px 6px 10px 5px rgba(247, 149, 60, 0.08);
-            }
-          }
+    @keyframes pulse {
+      0% {
+        box-shadow: 5px 6px 10px 5px rgba(247, 149, 60, 0.08);
+      }
+    }
 
   }
 }

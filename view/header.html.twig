@@ -15,24 +15,24 @@
 			</li>
 
 			<li>
-				<a href="{{ path('dashboard') }}">Mon compte</a>
-			</li>
-			<li>
-				User ID : {{ session.id }}
+				<a href="{{ path('dashboard') }}">Profil
+					{{ session.username }}</a>
 			</li>
 			<li>
 
 				{% if session.connect %}
+
 					<a href="{{ path('logout') }}">
 						<button id="user-deconnect" type="submit" name="logout">Déconnexion
 						</button>
+
 					</a>
 				{% else %}
 					<a href="{{ path('login') }}" class="connexion-btn">
 
-						<button id="user-connect" type="submit" name="connexion">
-							Connexion</button>
+						<button id="user-connect" type="submit" name="connexion">Connexion</button>
 					</a>
+
 				{% endif %}
 
 

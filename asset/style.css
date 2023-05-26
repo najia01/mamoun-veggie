@@ -66,6 +66,22 @@ header ul.menu li a {
 header ul.menu li a:hover {
   color: #b54f2c;
 }
+header ul.menu li #user-deconnect {
+  width: 120px;
+  height: 30px;
+  border: none;
+  border-radius: 20px;
+  font-family: "OpenSans-Bold", sans-serif;
+  text-decoration: none;
+  font-size: 1rem;
+  color: black;
+  cursor: pointer;
+  background-color: #ebded5;
+}
+header ul.menu li #user-deconnect:hover {
+  opacity: 50%;
+  color: #b54f2c;
+}
 header ul.menu li #user-connect {
   width: 120px;
   height: 30px;
@@ -673,6 +689,25 @@ button {
   text-shadow: 0 0 2em rgb(255, 255, 255);
   color: black;
   border-color: #f7953c;
+}
+
+*,
+:before,
+:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.row-limit-size {
+  max-width: 1300px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+body {
+  padding: 10px;
+  height: auto;
 }
 
 .footer-contain {
